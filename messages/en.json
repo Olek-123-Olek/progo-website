@@ -1,0 +1,329 @@
+{
+  "meta": {
+    "title": "ProGo — All Logistics. One Map.",
+    "description": "ProGo is one shared logistics operating system for carriers, dispatchers, drivers, clients and forwarders. Not another portal — one live platform for vehicles, loads, GPS, statuses, documents, chats and accounting.",
+    "ogDescription": "One shared logistics operating system for carriers, drivers, dispatchers and clients. Stop jumping between WhatsApp, Excel and customer portals."
+  },
+  "common": {
+    "tagline": "All Logistics. One Map.",
+    "openPlatform": "Open Platform",
+    "contact": "Contact",
+    "contactUs": "Contact Us",
+    "contactAdmin": "Contact admin@progo.one",
+    "joinFacebook": "Join Facebook",
+    "facebookCommunity": "Facebook Community",
+    "live": "LIVE",
+    "comingSoonSocial": "TikTok and Instagram — coming soon",
+    "toggleMenu": "Toggle menu",
+    "language": "Language",
+    "perMonth": "/month",
+    "currency": "€",
+    "mostPopular": "Most popular",
+    "savePerMonth": "Save €{amount}/mo vs monthly",
+    "billed": "billed {period}",
+    "fullFunctionality": "full ProGo functionality"
+  },
+  "nav": {
+    "problem": "Problem",
+    "whyProgo": "Why ProGo",
+    "howItWorks": "How it works",
+    "features": "Features",
+    "pricing": "Pricing",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "All Logistics. One Map.",
+    "title": "One shared system for <highlight>carriers, drivers, dispatchers</highlight> and clients.",
+    "paragraph1": "ProGo is not another portal. It is one live operating system where carriers, drivers, dispatchers, forwarders and clients work together — without jumping between dozens of CRMs, WhatsApp groups, Excel files and customer apps.",
+    "paragraph2": "Vehicles, loads, GPS, statuses, documents, chats, My Plan, Accounting, SOS and company collaboration — connected in one platform."
+  },
+  "trialBanner": {
+    "ariaLabel": "Free trial offer",
+    "badge": "1 month free",
+    "badgeHint": "Full platform access · No commitment",
+    "title": "Carriers, shippers & producers — <highlight>try ProGo free for 30 days</highlight>",
+    "subtitle": "Whether you run trucks, move freight or produce goods and need reliable transport — join our platform and see if one live map changes how you work.",
+    "audiences": {
+      "carriers": "Carriers & fleet owners",
+      "shippers": "Businesses with freight to move",
+      "producers": "Producers looking for vehicles"
+    },
+    "points": {
+      "access": "Full access: vehicles, loads, GPS, statuses, documents and team chat",
+      "stay": "Like it? Stay with us and we'll shape the next step together",
+      "leave": "Not a fit? Walk away anytime — no pressure, no traps"
+    },
+    "cta": "Start your free month",
+    "ctaHint": "Try first · Decide later · Cancel anytime",
+    "daysNumber": "30",
+    "daysLabel": "Days",
+    "freeLabel": "FREE"
+  },
+  "map": {
+    "title": "Live Operations Map",
+    "region": "EU · Central corridor",
+    "ariaLabel": "Live logistics map showing vehicles, loads and SOS",
+    "screenshotAlt": "ProGo platform — live GPS map with fleet menu and filters",
+    "vehicleCallout": "Vehicle #24",
+    "vehicleMeta": "DE → PL · 68 km/h",
+    "loadCallout": "Load PG-1042",
+    "loadMeta": "12 pallets · In transit",
+    "sosCallout": "SOS standby",
+    "sosMeta": "Driver help · 1-tap",
+    "legendVehicles": "Vehicles",
+    "legendLoads": "Loads",
+    "legendHubs": "Hubs",
+    "legendSos": "SOS",
+    "statsVehicles": "Vehicles",
+    "statsLoads": "Loads",
+    "statsDocuments": "Documents",
+    "statsSos": "SOS",
+    "gpsActive": "GPS Live",
+    "menu": {
+      "myPlan": "My Plan",
+      "phoneBook": "Phone Book",
+      "fleet": "Fleet",
+      "orders": "Orders",
+      "chats": "Chats",
+      "mechanic": "Mechanic",
+      "gps": "GPS",
+      "accounting": "Accounting"
+    },
+    "filters": {
+      "title": "Map filters",
+      "vehicles": "Vehicles",
+      "inquiry": "Inquiry",
+      "hub": "Hub",
+      "orders": "Orders",
+      "services": "Services",
+      "sos": "SOS",
+      "mapStyle": "Map style",
+      "standard": "Standard",
+      "light": "Light"
+    }
+  },
+  "trust": {
+    "items": [
+      "Built by logistics professionals",
+      "Designed for real dispatch work",
+      "Driver-first workflow",
+      "Company-to-company collaboration",
+      "EU logistics focus"
+    ]
+  },
+  "problem": {
+    "label": "The problem",
+    "title": "Logistics is overloaded with disconnected systems.",
+    "description": "Today every company has its own CRM, portal or mobile app. Drivers register in many systems, update statuses in different places and upload documents into separate portals. Dispatchers forget documents, miss statuses and lose hours in WhatsApp, Excel and emails — then penalties and delayed payments follow.",
+    "cards": {
+      "portals": {
+        "title": "Too many customer portals",
+        "description": "Every client has its own system. Drivers register again and again just to access loads."
+      },
+      "status": {
+        "title": "Drivers forget status updates",
+        "description": "Statuses live in WhatsApp, phone calls and separate apps — never in one reliable place."
+      },
+      "documents": {
+        "title": "Missing CMR and documents",
+        "description": "Dispatchers forget uploads. Payments stall when proof of delivery is missing or late."
+      },
+      "chat": {
+        "title": "WhatsApp chaos",
+        "description": "Critical updates disappear in group chats. Nobody knows the latest truth on a load."
+      },
+      "excel": {
+        "title": "Excel planning without live status",
+        "description": "Plans look fine on paper, but the office cannot see what is actually happening on the road."
+      },
+      "payment": {
+        "title": "Payment delays and penalties",
+        "description": "Wrong or late statuses trigger penalties, disputes and delayed settlements."
+      }
+    }
+  },
+  "whyProgo": {
+    "label": "Why ProGo is different",
+    "title": "Not another portal. One shared operating system.",
+    "description": "ProGo is not another customer portal or isolated CRM. It is one live platform where carriers, drivers, dispatchers, forwarders and clients work together — without jumping between dozens of systems, WhatsApp groups, Excel files and customer apps.",
+    "traditionalTitle": "Traditional logistics",
+    "progoTitle": "ProGo",
+    "traditional": [
+      "Many portals — every client has its own system",
+      "WhatsApp chaos — updates lost in group chats",
+      "Missing CMR — documents not connected to jobs",
+      "Delayed statuses — nobody sees the live truth",
+      "Penalties and payment delays",
+      "No shared visibility across companies"
+    ],
+    "progo": [
+      "One shared map for the whole operation",
+      "One live plan connected to real job data",
+      "One driver workflow — GPS, status, documents",
+      "Documents connected to every job",
+      "Shared company visibility across partners",
+      "Accounting connected to operations"
+    ]
+  },
+  "solution": {
+    "label": "The solution",
+    "title": "ProGo brings the operation into one shared workspace.",
+    "description": "One system for everyone: vehicles, loads, GPS, statuses, documents, chats, My Plan, Accounting, SOS and company collaboration. Carriers, dispatchers, drivers, clients and forwarders finally work from the same live platform — not separate tools.",
+    "items": {
+      "map": {
+        "title": "One map",
+        "description": "Vehicles, loads, hubs and SOS on a single live operations map."
+      },
+      "plan": {
+        "title": "One plan",
+        "description": "Excel-style planning connected to real job data — not static spreadsheets."
+      },
+      "driver": {
+        "title": "One driver workflow",
+        "description": "GPS, statuses and documents in one mobile flow for every driver."
+      },
+      "docs": {
+        "title": "One document flow",
+        "description": "CMR and files attached to each job, visible to everyone who needs them."
+      },
+      "messages": {
+        "title": "One chat system",
+        "description": "Structured communication tied to loads — not scattered WhatsApp threads."
+      },
+      "accounting": {
+        "title": "One accounting view",
+        "description": "Shared financial rows between owner, client and carrier in one place."
+      }
+    }
+  },
+  "howItWorks": {
+    "label": "How it works",
+    "title": "From registration to live operations in four steps.",
+    "description": "Get your company, fleet and partners connected — then run the full logistics workflow in one system.",
+    "steps": {
+      "1": {
+        "title": "Register your company",
+        "description": "Create your ProGo workspace and set up your logistics operation in minutes."
+      },
+      "2": {
+        "title": "Add vehicles, drivers and dispatchers",
+        "description": "Organize your fleet, assign roles and give every team member the right access."
+      },
+      "3": {
+        "title": "Connect with carriers, clients or forwarders",
+        "description": "Invite partner companies so everyone works on the same jobs — not separate portals."
+      },
+      "4": {
+        "title": "Run jobs, statuses, documents and accounting in one system",
+        "description": "Plan loads, track GPS, update statuses, upload CMR and manage finances — all live."
+      }
+    }
+  },
+  "features": {
+    "label": "Platform features",
+    "title": "Everything your logistics operation needs — in one system.",
+    "description": "Live map, planning, driver workflows, documents, communication, accounting and collaboration — built for real dispatch work, not generic software templates.",
+    "items": {
+      "map": {
+        "title": "Live Map",
+        "description": "Vehicles, loads, services, hubs and SOS — all visible on one operations map."
+      },
+      "plan": {
+        "title": "My Plan",
+        "description": "Excel-style planning with live job details, assignments and status visibility."
+      },
+      "driver": {
+        "title": "Driver App",
+        "description": "GPS tracking, status updates and document uploads from the road."
+      },
+      "docs": {
+        "title": "Documents & CMR",
+        "description": "Upload and connect files to each job so dispatch and finance always have proof."
+      },
+      "messages": {
+        "title": "Chats & Phone Book",
+        "description": "Structured communication and contacts instead of WhatsApp chaos."
+      },
+      "accounting": {
+        "title": "Accounting",
+        "description": "Shared rows between owner, client and carrier — one financial truth per job."
+      },
+      "sos": {
+        "title": "SOS",
+        "description": "Help on the route when drivers need support fast."
+      },
+      "collab": {
+        "title": "Company Collaboration",
+        "description": "One job visible to connected companies — carriers, forwarders and clients together."
+      },
+      "fleet": {
+        "title": "Fleet Management",
+        "description": "Vehicles, drivers and dispatchers organized with clear roles and access."
+      },
+      "monitor": {
+        "title": "Live Monitor",
+        "description": "Office and TV visibility mode for real-time operations awareness."
+      }
+    }
+  },
+  "preview": {
+    "inTransit": "In transit",
+    "loading": "Loading",
+    "delivered": "Delivered",
+    "job": "Job",
+    "route": "Route",
+    "status": "Status",
+    "loaded": "Loaded",
+    "signed": "Signed",
+    "cmr": "CMR",
+    "eta": "Load PG-1042 — ETA 14:30",
+    "cmrUploaded": "CMR uploaded ✓",
+    "client": "Client",
+    "carrier": "Carrier",
+    "amount": "Amount",
+    "emergency": "Emergency active",
+    "routeAlert": "Route A7 · Driver alert",
+    "officeMode": "Office / TV mode",
+    "vehicle": "Vehicle",
+    "driver": "Driver",
+    "dispatch": "Dispatch",
+    "collabCarrier": "Carrier",
+    "collabForwarder": "Forwarder",
+    "collabClient": "Client"
+  },
+  "pricing": {
+    "label": "Pricing",
+    "title": "Simple pricing. Pay per user group.",
+    "description": "All plans include full ProGo functionality. Price depends only on number of users.",
+    "billing": {
+      "monthly": "Monthly",
+      "semiannual": "6 months",
+      "yearly": "Yearly"
+    },
+    "discount10": "-10%",
+    "discount20": "-20%",
+    "tiers": {
+      "tier1": "1–5 users",
+      "tier2": "5–15 users",
+      "tier3": "15–50 users",
+      "tier4": "50+ users"
+    },
+    "footerText": "All plans include {highlight}. Price depends only on number of users.",
+    "footerDiscounts": "6 months: {d10} · Yearly: {d20}"
+  },
+  "cta": {
+    "title": "Ready to connect your logistics operations?",
+    "description": "Join ProGo and replace fragmented portals with one live system for your carriers, drivers, dispatchers and clients."
+  },
+  "social": {
+    "text": "Follow ProGo and join the logistics community"
+  },
+  "footer": {
+    "about": "One shared logistics operating system for carriers, dispatchers, drivers, clients and forwarders.",
+    "platform": "Platform",
+    "community": "Community",
+    "taglineHeading": "Tagline",
+    "copyright": "© {year} ProGo",
+    "osTagline": "One shared logistics operating system."
+  }
+}

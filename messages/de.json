@@ -1,0 +1,203 @@
+{
+  "meta": {
+    "title": "ProGo — Alle Logistik. Eine Karte.",
+    "description": "ProGo ist ein gemeinsames Logistik-Betriebssystem für Spediteure, Disponenten, Fahrer, Kunden und Forwarder. Kein weiteres Portal — eine Live-Plattform für Fahrzeuge, Ladungen, GPS, Status, Dokumente, Chats und Buchhaltung.",
+    "ogDescription": "Ein gemeinsames Logistik-Betriebssystem für Spediteure, Fahrer, Disponenten und Kunden. Schluss mit WhatsApp, Excel und Kundenportalen."
+  },
+  "common": {
+    "tagline": "Alle Logistik. Eine Karte.",
+    "openPlatform": "Plattform öffnen",
+    "contact": "Kontakt",
+    "contactUs": "Kontakt aufnehmen",
+    "contactAdmin": "Kontakt admin@progo.one",
+    "joinFacebook": "Facebook beitreten",
+    "facebookCommunity": "Facebook-Community",
+    "live": "LIVE",
+    "comingSoonSocial": "TikTok und Instagram — demnächst",
+    "toggleMenu": "Menü öffnen",
+    "language": "Sprache",
+    "perMonth": "/Monat",
+    "currency": "€",
+    "mostPopular": "Am beliebtesten",
+    "savePerMonth": "€{amount}/Mo. sparen vs. monatlich",
+    "billed": "abgerechnet {period}",
+    "fullFunctionality": "voller ProGo-Funktionsumfang"
+  },
+  "nav": {
+    "problem": "Problem",
+    "whyProgo": "Warum ProGo",
+    "howItWorks": "So funktioniert's",
+    "features": "Funktionen",
+    "pricing": "Preise",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "badge": "Alle Logistik. Eine Karte.",
+    "title": "Ein gemeinsames System für <highlight>Spediteure, Fahrer, Disponenten</highlight> und Kunden.",
+    "paragraph1": "ProGo ist kein weiteres Portal. Es ist ein Live-Betriebssystem, in dem Spediteure, Fahrer, Disponenten, Forwarder und Kunden zusammenarbeiten — ohne zwischen Dutzenden CRMs, WhatsApp-Gruppen, Excel-Dateien und Kunden-Apps zu wechseln.",
+    "paragraph2": "Fahrzeuge, Ladungen, GPS, Status, Dokumente, Chats, My Plan, Buchhaltung, SOS und Firmenzusammenarbeit — verbunden in einer Plattform."
+  },
+  "trialBanner": {
+    "ariaLabel": "Kostenloses Testangebot",
+    "badge": "1 Monat kostenlos",
+    "badgeHint": "Voller Plattformzugang · Keine Verpflichtung",
+    "title": "Spediteure, Absender & Produzenten — <highlight>testen Sie ProGo 30 Tage gratis</highlight>",
+    "subtitle": "Ob Sie Lkw führen, Fracht bewegen oder Waren produzieren und Transport suchen — treten Sie unserer Plattform bei und prüfen Sie, ob eine Live-Karte Ihre Arbeit verändert.",
+    "audiences": {
+      "carriers": "Spediteure & Fuhrparkbetreiber",
+      "shippers": "Unternehmen mit Fracht",
+      "producers": "Produzenten auf Transportsuche"
+    },
+    "points": {
+      "access": "Voller Zugang: Fahrzeuge, Ladungen, GPS, Status, Dokumente und Team-Chat",
+      "stay": "Gefällt es Ihnen? Bleiben Sie — wir besprechen gemeinsam den nächsten Schritt",
+      "leave": "Passt nicht? Jederzeit gehen — ohne Druck, ohne Fallen"
+    },
+    "cta": "Gratismonat starten",
+    "ctaHint": "Erst testen · Dann entscheiden · Jederzeit kündbar",
+    "daysNumber": "30",
+    "daysLabel": "Tage",
+    "freeLabel": "GRATIS"
+  },
+  "map": {
+    "title": "Live-Betriebskarte",
+    "region": "EU · Zentralkorridor",
+    "ariaLabel": "Live-Logistikkarte mit Fahrzeugen, Ladungen und SOS",
+    "screenshotAlt": "ProGo-Plattform — Live-GPS-Karte mit Flottenmenü und Filtern",
+    "vehicleCallout": "Fahrzeug #24",
+    "vehicleMeta": "DE → PL · 68 km/h",
+    "loadCallout": "Ladung PG-1042",
+    "loadMeta": "12 Paletten · Unterwegs",
+    "sosCallout": "SOS bereit",
+    "sosMeta": "Fahrerhilfe · 1 Tipp",
+    "legendVehicles": "Fahrzeuge",
+    "legendLoads": "Ladungen",
+    "legendHubs": "Hubs",
+    "legendSos": "SOS",
+    "statsVehicles": "Fahrzeuge",
+    "statsLoads": "Ladungen",
+    "statsDocuments": "Dokumente",
+    "statsSos": "SOS",
+    "gpsActive": "GPS Live",
+    "menu": {
+      "myPlan": "Mein Plan",
+      "phoneBook": "Telefonbuch",
+      "fleet": "Flottenverwaltung",
+      "orders": "Aufträge",
+      "chats": "Chats",
+      "mechanic": "Mechaniker",
+      "gps": "GPS",
+      "accounting": "Buchhaltung"
+    },
+    "filters": {
+      "title": "Kartenfilter",
+      "vehicles": "Fahrzeuge",
+      "inquiry": "Anfragen",
+      "hub": "Hubs",
+      "orders": "Aufträge",
+      "services": "Services",
+      "sos": "SOS",
+      "mapStyle": "Kartenstil",
+      "standard": "Standard",
+      "light": "Hell"
+    }
+  },
+  "trust": {
+    "items": [
+      "Von Logistikprofis entwickelt",
+      "Für echte Disposition gebaut",
+      "Fahrer-zentrierter Workflow",
+      "Zusammenarbeit zwischen Unternehmen",
+      "Fokus auf EU-Logistik"
+    ]
+  },
+  "problem": {
+    "label": "Das Problem",
+    "title": "Logistik ist überlastet mit getrennten Systemen.",
+    "description": "Heute hat jedes Unternehmen sein eigenes CRM, Portal oder seine App. Fahrer registrieren sich in vielen Systemen, aktualisieren Status an verschiedenen Orten und laden Dokumente in separate Portale hoch. Disponenten vergessen Uploads, verpassen Status und verlieren Stunden in WhatsApp, Excel und E-Mails — dann folgen Strafen und Zahlungsverzögerungen.",
+    "cards": {
+      "portals": { "title": "Zu viele Kundenportale", "description": "Jeder Kunde hat ein eigenes System. Fahrer müssen sich immer wieder registrieren, nur um Ladungen zu sehen." },
+      "status": { "title": "Fahrer vergessen Status-Updates", "description": "Status leben in WhatsApp, Telefonaten und separaten Apps — nie an einem zuverlässigen Ort." },
+      "documents": { "title": "Fehlende CMR und Dokumente", "description": "Disponenten vergessen Uploads. Zahlungen stocken, wenn der Lieferschein fehlt oder zu spät kommt." },
+      "chat": { "title": "WhatsApp-Chaos", "description": "Wichtige Updates verschwinden in Gruppenchats. Niemand kennt den aktuellen Stand einer Ladung." },
+      "excel": { "title": "Excel-Planung ohne Live-Status", "description": "Pläne sehen gut aus, aber das Büro sieht nicht, was wirklich auf der Straße passiert." },
+      "payment": { "title": "Zahlungsverzögerungen und Strafen", "description": "Falsche oder verspätete Status lösen Strafen, Streitigkeiten und verzögerte Abrechnungen aus." }
+    }
+  },
+  "whyProgo": {
+    "label": "Warum ProGo anders ist",
+    "title": "Kein weiteres Portal. Ein gemeinsames Betriebssystem.",
+    "description": "ProGo ist kein isoliertes Kundenportal oder CRM. Es ist eine Live-Plattform, auf der Spediteure, Fahrer, Disponenten, Forwarder und Kunden zusammenarbeiten — ohne zwischen Dutzenden Systemen zu wechseln.",
+    "traditionalTitle": "Traditionelle Logistik",
+    "progoTitle": "ProGo",
+    "traditional": ["Viele Portale — jeder Kunde hat ein eigenes System", "WhatsApp-Chaos — Updates gehen in Gruppenchats verloren", "Fehlende CMR — Dokumente nicht mit Aufträgen verbunden", "Verspätete Status — niemand sieht die Live-Wahrheit", "Strafen und Zahlungsverzögerungen", "Keine gemeinsame Sichtbarkeit zwischen Unternehmen"],
+    "progo": ["Eine gemeinsame Karte für den gesamten Betrieb", "Ein Live-Plan verbunden mit echten Auftragsdaten", "Ein Fahrer-Workflow — GPS, Status, Dokumente", "Dokumente mit jedem Auftrag verbunden", "Gemeinsame Sichtbarkeit zwischen Partnern", "Buchhaltung mit dem Betrieb verbunden"]
+  },
+  "solution": {
+    "label": "Die Lösung",
+    "title": "ProGo bringt den Betrieb in einen gemeinsamen Arbeitsbereich.",
+    "description": "Ein System für alle: Fahrzeuge, Ladungen, GPS, Status, Dokumente, Chats, My Plan, Buchhaltung, SOS und Firmenzusammenarbeit. Spediteure, Disponenten, Fahrer, Kunden und Forwarder arbeiten endlich auf derselben Live-Plattform.",
+    "items": {
+      "map": { "title": "Eine Karte", "description": "Fahrzeuge, Ladungen, Hubs und SOS auf einer Live-Betriebskarte." },
+      "plan": { "title": "Ein Plan", "description": "Excel-ähnliche Planung verbunden mit echten Auftragsdaten — keine statischen Tabellen." },
+      "driver": { "title": "Ein Fahrer-Workflow", "description": "GPS, Status und Dokumente in einem mobilen Ablauf für jeden Fahrer." },
+      "docs": { "title": "Ein Dokumentenfluss", "description": "CMR und Dateien an jeden Auftrag gebunden, für alle sichtbar, die sie brauchen." },
+      "messages": { "title": "Ein Chat-System", "description": "Strukturierte Kommunikation pro Ladung — nicht verstreute WhatsApp-Threads." },
+      "accounting": { "title": "Eine Buchhaltungsansicht", "description": "Gemeinsame Finanzzeilen zwischen Eigentümer, Kunde und Spediteur an einem Ort." }
+    }
+  },
+  "howItWorks": {
+    "label": "So funktioniert's",
+    "title": "Von der Registrierung zum Live-Betrieb in vier Schritten.",
+    "description": "Verbinden Sie Ihr Unternehmen, Ihre Flotte und Partner — und führen Sie den gesamten Logistik-Workflow in einem System aus.",
+    "steps": {
+      "1": { "title": "Unternehmen registrieren", "description": "Erstellen Sie Ihren ProGo-Workspace und richten Sie Ihren Logistikbetrieb in Minuten ein." },
+      "2": { "title": "Fahrzeuge, Fahrer und Disponenten hinzufügen", "description": "Organisieren Sie Ihre Flotte, weisen Sie Rollen zu und geben Sie jedem die richtigen Zugriffe." },
+      "3": { "title": "Mit Spediteuren, Kunden oder Forwardern verbinden", "description": "Laden Sie Partner ein, damit alle an denselben Aufträgen arbeiten — nicht in separaten Portalen." },
+      "4": { "title": "Aufträge, Status, Dokumente und Buchhaltung in einem System", "description": "Ladungen planen, GPS verfolgen, Status aktualisieren, CMR hochladen und Finanzen verwalten — alles live." }
+    }
+  },
+  "features": {
+    "label": "Plattform-Funktionen",
+    "title": "Alles, was Ihr Logistikbetrieb braucht — in einem System.",
+    "description": "Live-Karte, Planung, Fahrer-Workflows, Dokumente, Kommunikation, Buchhaltung und Zusammenarbeit — für echte Disposition, nicht für generische Software.",
+    "items": {
+      "map": { "title": "Live-Karte", "description": "Fahrzeuge, Ladungen, Services, Hubs und SOS — alles auf einer Betriebskarte." },
+      "plan": { "title": "My Plan", "description": "Excel-ähnliche Planung mit Live-Auftragsdetails, Zuweisungen und Status." },
+      "driver": { "title": "Fahrer-App", "description": "GPS-Tracking, Status-Updates und Dokumenten-Upload von unterwegs." },
+      "docs": { "title": "Dokumente & CMR", "description": "Dateien mit jedem Auftrag verbinden, damit Disposition und Finanzen immer Nachweise haben." },
+      "messages": { "title": "Chats & Telefonbuch", "description": "Strukturierte Kommunikation und Kontakte statt WhatsApp-Chaos." },
+      "accounting": { "title": "Buchhaltung", "description": "Gemeinsame Zeilen zwischen Eigentümer, Kunde und Spediteur — eine finanzielle Wahrheit pro Auftrag." },
+      "sos": { "title": "SOS", "description": "Hilfe auf der Route, wenn Fahrer schnell Unterstützung brauchen." },
+      "collab": { "title": "Firmenzusammenarbeit", "description": "Ein Auftrag für verbundene Unternehmen sichtbar — Spediteure, Forwarder und Kunden zusammen." },
+      "fleet": { "title": "Flottenmanagement", "description": "Fahrzeuge, Fahrer und Disponenten mit klaren Rollen und Zugriffen organisiert." },
+      "monitor": { "title": "Live-Monitor", "description": "Büro- und TV-Modus für Echtzeit-Überblick über den Betrieb." }
+    }
+  },
+  "preview": {
+    "inTransit": "Unterwegs", "loading": "Beladung", "delivered": "Geliefert", "job": "Auftrag", "route": "Route", "status": "Status",
+    "loaded": "Beladen", "signed": "Unterschrieben", "cmr": "CMR", "eta": "Ladung PG-1042 — ETA 14:30", "cmrUploaded": "CMR hochgeladen ✓",
+    "client": "Kunde", "carrier": "Spediteur", "amount": "Betrag", "emergency": "Notfall aktiv", "routeAlert": "Route A7 · Fahreralarm",
+    "officeMode": "Büro / TV-Modus", "vehicle": "Fahrzeug", "driver": "Fahrer", "dispatch": "Disposition",
+    "collabCarrier": "Spediteur", "collabForwarder": "Forwarder", "collabClient": "Kunde"
+  },
+  "pricing": {
+    "label": "Preise", "title": "Einfache Preise. Bezahlung pro Benutzergruppe.",
+    "description": "Alle Pläne beinhalten den vollen ProGo-Funktionsumfang. Der Preis hängt nur von der Benutzeranzahl ab.",
+    "billing": { "monthly": "Monatlich", "semiannual": "6 Monate", "yearly": "Jährlich" },
+    "discount10": "-10%", "discount20": "-20%",
+    "tiers": { "tier1": "1–5 Benutzer", "tier2": "5–15 Benutzer", "tier3": "15–50 Benutzer", "tier4": "50+ Benutzer" },
+    "footerText": "Alle Pläne beinhalten {highlight}. Der Preis hängt nur von der Benutzeranzahl ab.",
+    "footerDiscounts": "6 Monate: {d10} · Jährlich: {d20}"
+  },
+  "cta": {
+    "title": "Bereit, Ihre Logistik zu verbinden?",
+    "description": "Treten Sie ProGo bei und ersetzen Sie fragmentierte Portale durch ein Live-System für Spediteure, Fahrer, Disponenten und Kunden."
+  },
+  "social": { "text": "Folgen Sie ProGo und treten Sie der Logistik-Community bei" },
+  "footer": {
+    "about": "Ein gemeinsames Logistik-Betriebssystem für Spediteure, Disponenten, Fahrer, Kunden und Forwarder.",
+    "platform": "Plattform", "community": "Community", "taglineHeading": "Slogan",
+    "copyright": "© {year} ProGo", "osTagline": "Ein gemeinsames Logistik-Betriebssystem."
+  }
+}
