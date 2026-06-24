@@ -44,6 +44,14 @@
     "trustAccounting": "Інтеграція обліку",
     "trustSos": "Мережа SOS-допомоги"
   },
+  "viewCounter": {
+    "today": "Сьогодні",
+    "todayShort": "сьогодні",
+    "month": "За місяць",
+    "monthShort": "місяць",
+    "live": "live",
+    "ariaLabel": "Реальні перегляди сайту за сьогодні та місяць"
+  },
   "trialBanner": {
     "ariaLabel": "Пропозиція безкоштовного пробного періоду",
     "badge": "Місяць безкоштовно",

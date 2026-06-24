@@ -44,6 +44,14 @@
     "trustAccounting": "Integracja księgowa",
     "trustSos": "Sieć pomocy SOS"
   },
+  "viewCounter": {
+    "today": "Dziś",
+    "todayShort": "dziś",
+    "month": "W tym miesiącu",
+    "monthShort": "mies.",
+    "live": "live",
+    "ariaLabel": "Rzeczywiste wyświetlenia strony dziś i w tym miesiącu"
+  },
   "trialBanner": {
     "ariaLabel": "Oferta bezpłatnego okresu próbnego",
     "badge": "Miesiąc za darmo",

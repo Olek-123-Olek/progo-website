@@ -44,6 +44,14 @@
     "trustAccounting": "Accounting integration",
     "trustSos": "SOS assistance network"
   },
+  "viewCounter": {
+    "today": "Today",
+    "todayShort": "today",
+    "month": "This month",
+    "monthShort": "month",
+    "live": "live",
+    "ariaLabel": "Real site views for today and this month"
+  },
   "trialBanner": {
     "ariaLabel": "Free trial offer",
     "badge": "1 month free",

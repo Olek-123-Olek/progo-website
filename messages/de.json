@@ -44,6 +44,14 @@
     "trustAccounting": "Buchhaltungsintegration",
     "trustSos": "SOS-Hilfenetzwerk"
   },
+  "viewCounter": {
+    "today": "Heute",
+    "todayShort": "heute",
+    "month": "Diesen Monat",
+    "monthShort": "Monat",
+    "live": "live",
+    "ariaLabel": "Echte Seitenaufrufe heute und in diesem Monat"
+  },
   "trialBanner": {
     "ariaLabel": "Kostenloses Testangebot",
     "badge": "1 Monat kostenlos",

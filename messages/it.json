@@ -44,6 +44,14 @@
     "trustAccounting": "Integrazione contabile",
     "trustSos": "Rete assistenza SOS"
   },
+  "viewCounter": {
+    "today": "Oggi",
+    "todayShort": "oggi",
+    "month": "Questo mese",
+    "monthShort": "mese",
+    "live": "live",
+    "ariaLabel": "Visualizzazioni reali del sito oggi e questo mese"
+  },
   "trialBanner": {
     "ariaLabel": "Offerta di prova gratuita",
     "badge": "1 mese gratis",

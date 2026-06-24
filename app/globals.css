@@ -738,6 +738,129 @@ body {
   100% { transform: scale(1.15); opacity: 0; }
 }
 
+/* View counter */
+.view-counter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 229, 255, 0.35);
+  background: linear-gradient(135deg, rgba(0, 229, 255, 0.12) 0%, rgba(8, 14, 28, 0.92) 100%);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset,
+    0 4px 20px rgba(0, 0, 0, 0.35),
+    0 0 24px rgba(0, 229, 255, 0.15);
+  font-size: 12px;
+  color: #94a3b8;
+  animation: fadeInUp 0.5s ease-out both;
+  white-space: nowrap;
+}
+
+.view-counter-pill-compact {
+  padding: 6px 10px;
+  gap: 6px;
+}
+
+.view-counter-pill-loading .view-counter-value {
+  opacity: 0.55;
+  animation: pulseGlow 1.5s ease-in-out infinite;
+}
+
+.view-counter-icon {
+  display: flex;
+  color: #00e5ff;
+  filter: drop-shadow(0 0 6px rgba(0, 229, 255, 0.45));
+}
+
+.view-counter-stats {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.view-counter-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.1;
+  min-width: 0;
+}
+
+.view-counter-pill-compact .view-counter-stats {
+  gap: 8px;
+}
+
+.view-counter-pill-compact .view-counter-stat {
+  flex-direction: row;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.view-counter-divider {
+  width: 1px;
+  height: 22px;
+  background: rgba(0, 229, 255, 0.2);
+  flex-shrink: 0;
+}
+
+.view-counter-pill-compact .view-counter-divider {
+  height: 16px;
+}
+
+.view-counter-stat-label {
+  font-size: 9px;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.view-counter-pill-compact .view-counter-stat-label {
+  font-size: 8px;
+}
+
+.view-counter-value {
+  font-size: 15px;
+  font-weight: 800;
+  color: #f8fafc;
+  letter-spacing: 0.02em;
+}
+
+.view-counter-pill-compact .view-counter-value {
+  font-size: 12px;
+}
+
+.view-counter-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding-left: 8px;
+  margin-left: 2px;
+  border-left: 1px solid rgba(0, 229, 255, 0.2);
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #22d3ee;
+}
+
+.view-counter-pill-compact .view-counter-live {
+  display: none;
+}
+
+.view-counter-live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00e5ff;
+  box-shadow: 0 0 8px rgba(0, 229, 255, 0.8);
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;

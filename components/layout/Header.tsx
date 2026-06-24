@@ -2,15 +2,19 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import { usePathname } from "@/i18n/navigation";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/Button";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
+import { ViewCounter } from "@/components/ui/ViewCounter";
 import { ProGoLogo } from "@/components/ui/ProGoLogo";
 import { Icon } from "@/components/ui/Icon";
 import { LINKS, NAV_ITEMS } from "@/lib/constants";
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
   const t = useTranslations("nav");
   const tc = useTranslations("common");
 
@@ -35,6 +39,7 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-2 md:flex">
+          {isHome && <ViewCounter compact />}
           <LanguageSwitcher />
           <Button href={LINKS.email} variant="ghost" size="sm">
             {tc("contact")}
@@ -46,6 +51,7 @@ export function Header() {
         </div>
 
         <div className="flex items-center gap-2 md:hidden">
+          {isHome && <ViewCounter compact />}
           <LanguageSwitcher />
           <button
             type="button"
@@ -64,6 +70,11 @@ export function Header() {
 
       {open && (
         <div className="border-t border-white/5 bg-navy-950/95 px-4 py-4 md:hidden">
+          {isHome && (
+            <div className="mb-4 flex justify-center">
+              <ViewCounter />
+            </div>
+          )}
           <nav className="flex flex-col gap-4">
             {NAV_ITEMS.map((item) => (
               <a
