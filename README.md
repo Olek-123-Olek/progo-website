@@ -2,6 +2,8 @@
 
 Standalone marketing website for ProGo, built with Next.js 15, TypeScript, and Tailwind CSS.
 
+Official ProGo marketing website.
+
 ## Getting Started
 
 Install dependencies:
