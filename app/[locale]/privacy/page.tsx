@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/Button";
+import { buildAlternates } from "@/lib/site";
 import { type Locale } from "@/i18n/routing";
 
 const SECTION_KEYS = [
@@ -28,6 +29,7 @@ export async function generateMetadata({
   return {
     title: t("title"),
     description: t("description"),
+    alternates: buildAlternates(locale, "/privacy"),
     robots: { index: true, follow: true },
   };
 }
