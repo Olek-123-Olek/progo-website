@@ -78,16 +78,33 @@ export function validateContactPayload(body: unknown): { ok: true; data: Contact
   };
 }
 
+function normalizeEnv(value: string | undefined): string | undefined {
+  if (!value) return undefined;
+  const trimmed = value.trim();
+  if (
+    (trimmed.startsWith('"') && trimmed.endsWith('"')) ||
+    (trimmed.startsWith("'") && trimmed.endsWith("'"))
+  ) {
+    return trimmed.slice(1, -1).trim();
+  }
+  return trimmed;
+}
+
+function resolveFromEmail(): string {
+  const configured = normalizeEnv(process.env.RESEND_FROM_EMAIL);
+  if (configured && configured.includes("@")) return configured;
+  return "ProGo Website <onboarding@resend.dev>";
+}
+
 export async function sendContactEmail(data: ContactPayload): Promise<void> {
-  const apiKey = process.env.RESEND_API_KEY;
+  const apiKey = normalizeEnv(process.env.RESEND_API_KEY);
   if (!apiKey) {
     throw new Error("RESEND_API_KEY is not configured");
   }
 
   const resend = new Resend(apiKey);
-  const to = process.env.CONTACT_TO_EMAIL ?? CONTACT_EMAIL;
-  const from =
-    process.env.RESEND_FROM_EMAIL ?? "ProGo Website <onboarding@resend.dev>";
+  const to = normalizeEnv(process.env.CONTACT_TO_EMAIL) ?? CONTACT_EMAIL;
+  const from = resolveFromEmail();
 
   const role = roleLabel(data.role, data.locale ?? "en");
   const company = data.company ?? "—";
@@ -126,6 +143,7 @@ export async function sendContactEmail(data: ContactPayload): Promise<void> {
   });
 
   if (error) {
+    console.error("[contact] Resend error:", error);
     throw new Error(error.message);
   }
 }

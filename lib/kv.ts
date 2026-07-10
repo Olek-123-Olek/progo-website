@@ -17,6 +17,30 @@ export function getKvClient(): VercelKV | null {
   return kvClient;
 }
 
+export async function peekRateLimit(key: string, limit: number): Promise<boolean> {
+  const kv = getKvClient();
+  if (!kv) return true;
+
+  try {
+    const count = await kv.get<number>(key);
+    return (count ?? 0) < limit;
+  } catch {
+    return true;
+  }
+}
+
+export async function recordRateLimitHit(key: string, windowSec: number): Promise<void> {
+  const kv = getKvClient();
+  if (!kv) return;
+
+  try {
+    const count = await kv.incr(key);
+    if (count === 1) await kv.expire(key, windowSec);
+  } catch {
+    // ignore
+  }
+}
+
 export async function checkRateLimit(
   key: string,
   limit: number,
