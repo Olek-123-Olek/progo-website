@@ -57,10 +57,6 @@ export function Hero() {
                 <Icon name="facebook" size={20} />
                 {tc("joinFacebook")}
               </Button>
-              <Button href={LINKS.contact} variant="ghost" size="lg">
-                <Icon name="email" size={20} />
-                {tc("contactUs")}
-              </Button>
             </div>
 
             <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2 animate-fade-in-up delay-500">

@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/Button";
 import { ProGoLogo } from "@/components/ui/ProGoLogo";
 import { Icon } from "@/components/ui/Icon";
 import { COPYRIGHT_YEAR, LINKS } from "@/lib/constants";
-import { CONTACT_EMAIL } from "@/lib/constants";
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -34,15 +33,6 @@ export function Footer() {
                 >
                   <Icon name="platform" size={16} />
                   {tc("openPlatform")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={LINKS.email}
-                  className="flex items-center gap-2 text-sm text-text-secondary transition-colors hover:text-cyan-soft"
-                >
-                  <Icon name="email" size={16} />
-                  {CONTACT_EMAIL}
                 </a>
               </li>
             </ul>
@@ -85,9 +75,13 @@ export function Footer() {
               {t("taglineHeading")}
             </h3>
             <p className="text-lg font-semibold text-text-primary">{tc("tagline")}</p>
-            <div className="mt-6">
+            <div className="mt-6 flex flex-col gap-2 sm:flex-row">
               <Button href={LINKS.platform} size="sm" external>
                 {tc("openPlatform")}
+              </Button>
+              <Button href={LINKS.contact} variant="secondary" size="sm">
+                <Icon name="email" size={16} />
+                {tc("contact")}
               </Button>
             </div>
           </div>
@@ -98,9 +92,6 @@ export function Footer() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-text-muted">
           <p>{t("copyright", { year: COPYRIGHT_YEAR })}</p>
           <p>{tc("tagline")}</p>
-          <a href={LINKS.email} className="hover:text-cyan-soft transition-colors">
-            {CONTACT_EMAIL}
-          </a>
         </div>
       </div>
     </footer>

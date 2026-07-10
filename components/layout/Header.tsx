@@ -41,9 +41,6 @@ export function Header() {
         <div className="hidden items-center gap-2 md:flex">
           {isHome && <ViewCounter compact />}
           <LanguageSwitcher />
-          <Button href={LINKS.contact} variant="ghost" size="sm">
-            {tc("contact")}
-          </Button>
           <Button href={LINKS.platform} size="sm" external>
             {tc("openPlatform")}
             <Icon name="arrow" size={16} className="arrow-accent" />
@@ -89,9 +86,6 @@ export function Header() {
             <div className="flex flex-col gap-2 pt-2">
               <Button href={LINKS.platform} size="sm" external className="w-full">
                 {tc("openPlatform")}
-              </Button>
-              <Button href={LINKS.contact} variant="secondary" size="sm" className="w-full">
-                {tc("contactUs")}
               </Button>
             </div>
           </nav>
