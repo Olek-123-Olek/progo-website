@@ -1,18 +1,7 @@
 import { useTranslations } from "next-intl";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-
-const FAQ_KEYS = [
-  "whatIsProgo",
-  "whoFor",
-  "freeTrial",
-  "afterTrial",
-  "difference",
-  "driverApp",
-  "pricingModel",
-  "dataPrivacy",
-  "howToStart",
-] as const;
+import { FAQ_KEYS } from "@/lib/constants";
 
 export function Faq() {
   const t = useTranslations("faq");
