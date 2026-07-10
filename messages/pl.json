@@ -2,7 +2,9 @@
   "meta": {
     "title": "ProGo — Cała logistyka. Jedna mapa.",
     "description": "ProGo to wspólny system operacyjny logistyki dla przewoźników, dyspozytorów, kierowców, klientów i spedytorów. Nie kolejny portal — jedna platforma na żywo dla pojazdów, ładunków, GPS, statusów, dokumentów, czatów i księgowości.",
-    "ogDescription": "Wspólny system operacyjny logistyki dla przewoźników, kierowców, dyspozytorów i klientów. Koniec z przeskakiwaniem między WhatsApp, Excel i portalami klientów."
+    "ogDescription": "Wspólny system operacyjny logistyki dla przewoźników, kierowców, dyspozytorów i klientów. Koniec z przeskakiwaniem między WhatsApp, Excel i portalami klientów.",
+    "ogTitle": "Jedna platforma. Cała logistyka. Jedna mapa.",
+    "ogTagline": "Cała logistyka. Jedna mapa."
   },
   "common": {
     "tagline": "Cała logistyka. Jedna mapa.",
@@ -10,6 +12,7 @@
     "contact": "Kontakt",
     "contactUs": "Skontaktuj się",
     "getInTouch": "Napisz do nas",
+    "privacyPolicy": "Polityka prywatności",
     "joinFacebook": "Dołącz na Facebooku",
     "facebookCommunity": "Społeczność Facebook",
     "live": "NA ŻYWO",
@@ -29,6 +32,7 @@
     "howItWorks": "Jak to działa",
     "features": "Funkcje",
     "pricing": "Cennik",
+    "faq": "FAQ",
     "contact": "Kontakt"
   },
   "hero": {
@@ -243,7 +247,9 @@
       "message": "Wiadomość",
       "messagePlaceholder": "Opisz flotę, ładunki, obecne narzędzia i co chcesz usprawnić...",
       "messageHint": "Minimum 5 znaków.",
-      "privacy": "Zgadzam się, aby ProGo skontaktowało się ze mną w sprawie zapytania.",
+      "privacyPrefix": "Akceptuję",
+      "privacyLink": "Politykę prywatności",
+      "privacySuffix": "i zgadzam się na kontakt ProGo w sprawie zapytania.",
       "submit": "Wyślij wiadomość",
       "submitting": "Wysyłanie...",
       "sendAnother": "Wyślij kolejną wiadomość",
@@ -266,5 +272,38 @@
     "about": "Wspólny system operacyjny logistyki dla przewoźników, dyspozytorów, kierowców, klientów i spedytorów.",
     "platform": "Platforma", "community": "Społeczność", "taglineHeading": "Slogan",
     "copyright": "© {year} ProGo", "osTagline": "Wspólny system operacyjny logistyki."
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Najczęściej zadawane pytania",
+    "description": "Szybkie odpowiedzi o ProGo, darmowym okresie próbnym i współpracy z przewoźnikami, nadawcami i producentami.",
+    "items": {
+      "whatIsProgo": { "q": "Czym jest ProGo?", "a": "ProGo to wspólny system operacyjny logistyki — jedna platforma na żywo dla pojazdów, ładunków, GPS, statusów, dokumentów, czatu i księgowości. Zastępuje rozproszone portale, grupy WhatsApp i arkusze Excel." },
+      "whoFor": { "q": "Dla kogo jest ProGo?", "a": "Dla przewoźników, dyspozytorów, kierowców, klientów frachtowych, producentów i spedytorów, którzy chcą jednej mapy i jednego workflow zamiast wielu narzędzi." },
+      "freeTrial": { "q": "Jak działa 30-dniowy trial?", "a": "Masz pełny dostęp do platformy przez 30 dni — bez zobowiązań. Jeśli ProGo nie pasuje, możesz odejść w każdej chwili." },
+      "afterTrial": { "q": "Co po okresie próbnym?", "a": "Wybierasz plan według liczby użytkowników. Cennik jest przejrzysty na stronie. Bez ukrytych opłat." },
+      "difference": { "q": "Czym ProGo różni się od CRM lub portalu klienta?", "a": "Portale są zwykle odizolowane. ProGo to jeden system na żywo, gdzie przewoźnicy, kierowcy, dyspozytorzy i klienci pracują na tej samej mapie i danych." },
+      "driverApp": { "q": "Czy jest aplikacja mobilna dla kierowców?", "a": "Tak. Kierowcy używają aplikacji ProGo do statusów, dokumentów, czatu i GPS — połączonej z mapą dyspozytora." },
+      "pricingModel": { "q": "Jak liczony jest cennik?", "a": "Plany zależą od liczby użytkowników. Wszystkie obejmują pełną funkcjonalność. Rabaty za 6 miesięcy i roczną płatność." },
+      "dataPrivacy": { "q": "Jak chronicie moje dane?", "a": "Przetwarzamy dane tylko w celu świadczenia usługi i odpowiedzi na zapytania. Szczegóły w Polityce prywatności." },
+      "howToStart": { "q": "Jak zacząć?", "a": "Otwórz platformę i rozpocznij darmowy miesiąc lub napisz przez formularz kontaktowy. Odpowiadamy zwykle w 24 godziny." }
+    }
+  },
+  "privacy": {
+    "label": "Prawne",
+    "title": "Polityka prywatności",
+    "updated": "Ostatnia aktualizacja: lipiec 2026",
+    "backHome": "Wróć na stronę główną",
+    "meta": { "title": "Polityka prywatności — ProGo", "description": "Jak ProGo zbiera, wykorzystuje i chroni dane osobowe na progo.one i platformie ProGo." },
+    "sections": {
+      "intro": { "title": "Wprowadzenie", "paragraphs": ["ProGo (\"my\", \"nas\") prowadzi progo.one i platformę logistyczną ProGo. Niniejsza polityka wyjaśnia, jakie dane zbieramy i jakie masz prawa, w tym na mocy RODO.", "Korzystając ze strony lub kontaktując się z nami, akceptujesz tę politykę."] },
+      "dataCollected": { "title": "Jakie dane zbieramy", "paragraphs": ["Formularz kontaktowy: imię, e-mail, firma (opcjonalnie), rola (opcjonalnie), treść wiadomości i język przeglądarki.", "Analityka strony: anonimowe dane o ruchu przez Vercel Analytics.", "Konta platformy: regulowane umową o świadczenie usług."] },
+      "howWeUse": { "title": "Jak wykorzystujemy dane", "paragraphs": ["Aby odpowiadać na zapytania i udzielać wsparcia.", "Aby wysyłać e-maile związane z Twoim zapytaniem.", "Aby ulepszać stronę i rozumieć ruch zbiorczy.", "Nie sprzedajemy danych osobowych stronom trzecim."] },
+      "contactForm": { "title": "Formularz i e-mail", "paragraphs": ["Po wysłaniu formularza wiadomość trafia do admin@progo.one przez bezpieczną usługę Resend.", "Twój e-mail jest ustawiany jako Reply-To, abyśmy mogli odpowiedzieć bezpośrednio."] },
+      "cookies": { "title": "Cookies i analityka", "paragraphs": ["Używamy Vercel Analytics do pomiaru ruchu — może to obejmować anonimowe cookies.", "Formularz używa session storage, aby nie liczyć powtórnych wyświetleń w liczniku na stronie."] },
+      "retention": { "title": "Przechowywanie", "paragraphs": ["Zapytania kontaktowe przechowujemy tak długo, jak to konieczne do obsługi i dokumentacji — zwykle do 24 miesięcy.", "Możesz poprosić o usunięcie danych w każdej chwili."] },
+      "rights": { "title": "Twoje prawa", "paragraphs": ["Masz prawo dostępu, sprostowania, usunięcia, ograniczenia przetwarzania i sprzeciwu — zgodnie z RODO.", "Kontakt: admin@progo.one. Możesz też złożyć skargę do organu ochrony danych."] },
+      "contact": { "title": "Kontakt", "paragraphs": ["Pytania o prywatność: admin@progo.one", "Strona: progo.one"] }
+    }
   }
 }

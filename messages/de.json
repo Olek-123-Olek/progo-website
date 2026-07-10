@@ -2,7 +2,9 @@
   "meta": {
     "title": "ProGo — Alle Logistik. Eine Karte.",
     "description": "ProGo ist ein gemeinsames Logistik-Betriebssystem für Spediteure, Disponenten, Fahrer, Kunden und Forwarder. Kein weiteres Portal — eine Live-Plattform für Fahrzeuge, Ladungen, GPS, Status, Dokumente, Chats und Buchhaltung.",
-    "ogDescription": "Ein gemeinsames Logistik-Betriebssystem für Spediteure, Fahrer, Disponenten und Kunden. Schluss mit WhatsApp, Excel und Kundenportalen."
+    "ogDescription": "Ein gemeinsames Logistik-Betriebssystem für Spediteure, Fahrer, Disponenten und Kunden. Schluss mit WhatsApp, Excel und Kundenportalen.",
+    "ogTitle": "Eine Plattform. Alle Logistik. Eine Karte.",
+    "ogTagline": "Alle Logistik. Eine Karte."
   },
   "common": {
     "tagline": "Alle Logistik. Eine Karte.",
@@ -10,6 +12,7 @@
     "contact": "Kontakt",
     "contactUs": "Kontakt aufnehmen",
     "getInTouch": "Kontakt aufnehmen",
+    "privacyPolicy": "Datenschutzerklärung",
     "joinFacebook": "Facebook beitreten",
     "facebookCommunity": "Facebook-Community",
     "live": "LIVE",
@@ -29,6 +32,7 @@
     "howItWorks": "So funktioniert's",
     "features": "Funktionen",
     "pricing": "Preise",
+    "faq": "FAQ",
     "contact": "Kontakt"
   },
   "hero": {
@@ -249,7 +253,9 @@
       "message": "Nachricht",
       "messagePlaceholder": "Beschreiben Sie Flotte, Ladungen, aktuelle Tools und Verbesserungswünsche...",
       "messageHint": "Mindestens 5 Zeichen.",
-      "privacy": "Ich stimme zu, dass ProGo mich bezüglich meiner Anfrage kontaktieren darf.",
+      "privacyPrefix": "Ich stimme der",
+      "privacyLink": "Datenschutzerklärung",
+      "privacySuffix": "zu und erlaube ProGo, mich bezüglich meiner Anfrage zu kontaktieren.",
       "submit": "Nachricht senden",
       "submitting": "Wird gesendet...",
       "sendAnother": "Weitere Nachricht senden",
@@ -272,5 +278,38 @@
     "about": "Ein gemeinsames Logistik-Betriebssystem für Spediteure, Disponenten, Fahrer, Kunden und Forwarder.",
     "platform": "Plattform", "community": "Community", "taglineHeading": "Slogan",
     "copyright": "© {year} ProGo", "osTagline": "Ein gemeinsames Logistik-Betriebssystem."
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Häufig gestellte Fragen",
+    "description": "Kurze Antworten zu ProGo, der kostenlosen Testphase und der Zusammenarbeit mit Spediteuren, Versendern und Produzenten.",
+    "items": {
+      "whatIsProgo": { "q": "Was ist ProGo?", "a": "ProGo ist ein gemeinsames Logistik-Betriebssystem — eine Live-Plattform für Fahrzeuge, Ladungen, GPS, Status, Dokumente, Team-Chat und Buchhaltung. Es ersetzt verstreute Kundenportale, WhatsApp-Gruppen und Tabellen." },
+      "whoFor": { "q": "Für wen ist ProGo?", "a": "Für Spediteure, Disponenten, Fahrer, Frachtkunden, Produzenten und Forwarder, die eine Karte und einen Workflow statt vieler getrennter Tools wollen." },
+      "freeTrial": { "q": "Wie funktioniert die 30-tägige Testphase?", "a": "Voller Plattformzugang für 30 Tage — ohne Verpflichtung. Wenn ProGo nicht passt, können Sie jederzeit aufhören." },
+      "afterTrial": { "q": "Was passiert nach der Testphase?", "a": "Wählen Sie einen Plan nach Nutzeranzahl. Transparente Preise auf der Website — keine versteckten Gebühren." },
+      "difference": { "q": "Worin unterscheidet sich ProGo von CRM oder Kundenportal?", "a": "Portale sind meist isoliert. ProGo ist ein Live-System, in dem alle auf derselben Karte und denselben Daten in Echtzeit arbeiten." },
+      "driverApp": { "q": "Gibt es eine mobile App für Fahrer?", "a": "Ja. Fahrer nutzen die ProGo-App für Status, Dokumente, Chat und GPS — verbunden mit derselben Live-Karte wie die Disposition." },
+      "pricingModel": { "q": "Wie wird der Preis berechnet?", "a": "Nach Nutzeranzahl. Alle Pläne mit vollem Funktionsumfang. Rabatte bei 6-Monats- und Jahresabrechnung." },
+      "dataPrivacy": { "q": "Wie schützen Sie meine Daten?", "a": "Wir verarbeiten Daten nur zur Bereitstellung des Dienstes und für Anfragen. Details in unserer Datenschutzerklärung." },
+      "howToStart": { "q": "Wie starte ich?", "a": "Öffnen Sie die Plattform oder kontaktieren Sie uns über das Formular. Wir antworten in der Regel innerhalb von 24 Stunden." }
+    }
+  },
+  "privacy": {
+    "label": "Rechtliches",
+    "title": "Datenschutzerklärung",
+    "updated": "Zuletzt aktualisiert: Juli 2026",
+    "backHome": "Zur Startseite",
+    "meta": { "title": "Datenschutzerklärung — ProGo", "description": "Wie ProGo personenbezogene Daten auf progo.one erhebt, nutzt und schützt." },
+    "sections": {
+      "intro": { "title": "Überblick", "paragraphs": ["ProGo betreibt progo.one und die ProGo-Plattform. Diese Erklärung beschreibt, welche Daten wir erheben und Ihre Rechte nach der DSGVO.", "Mit der Nutzung der Website stimmen Sie dieser Erklärung zu."] },
+      "dataCollected": { "title": "Welche Daten wir erheben", "paragraphs": ["Kontaktformular: Name, E-Mail, Firma, Rolle, Nachricht, Browser-Sprache.", "Analytics: anonymisierter Traffic über Vercel Analytics.", "Plattformkonten: gemäß Ihrem Servicevertrag."] },
+      "howWeUse": { "title": "Wofür wir Daten nutzen", "paragraphs": ["Zur Beantwortung von Anfragen und Support.", "Für E-Mails zu Ihrer Anfrage.", "Zur Verbesserung der Website.", "Wir verkaufen keine personenbezogenen Daten."] },
+      "contactForm": { "title": "Kontaktformular & E-Mail", "paragraphs": ["Nachrichten gehen an admin@progo.one über Resend.", "Ihre E-Mail ist Reply-To für direkte Antworten."] },
+      "cookies": { "title": "Cookies", "paragraphs": ["Vercel Analytics zur Traffic-Messung.", "Session Storage für den Seitenaufrufzähler."] },
+      "retention": { "title": "Speicherdauer", "paragraphs": ["Anfragen bis zu 24 Monate, sofern das Gesetz nichts anderes verlangt.", "Löschung auf Anfrage möglich."] },
+      "rights": { "title": "Ihre Rechte", "paragraphs": ["Auskunft, Berichtigung, Löschung, Einschränkung — gemäß DSGVO.", "Kontakt: admin@progo.one. Beschwerde bei einer Aufsichtsbehörde."] },
+      "contact": { "title": "Kontakt", "paragraphs": ["Datenschutzfragen: admin@progo.one", "Website: progo.one"] }
+    }
   }
 }

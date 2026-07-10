@@ -2,7 +2,9 @@
   "meta": {
     "title": "ProGo — All Logistics. One Map.",
     "description": "ProGo is one shared logistics operating system for carriers, dispatchers, drivers, clients and forwarders. Not another portal — one live platform for vehicles, loads, GPS, statuses, documents, chats and accounting.",
-    "ogDescription": "One shared logistics operating system for carriers, drivers, dispatchers and clients. Stop jumping between WhatsApp, Excel and customer portals."
+    "ogDescription": "One shared logistics operating system for carriers, drivers, dispatchers and clients. Stop jumping between WhatsApp, Excel and customer portals.",
+    "ogTitle": "One Platform. All Logistics. One Map.",
+    "ogTagline": "All Logistics. One Map."
   },
   "common": {
     "tagline": "All Logistics. One Map.",
@@ -10,6 +12,7 @@
     "contact": "Contact",
     "contactUs": "Contact Us",
     "getInTouch": "Get in touch",
+    "privacyPolicy": "Privacy Policy",
     "joinFacebook": "Join Facebook",
     "facebookCommunity": "Facebook Community",
     "live": "LIVE",
@@ -29,6 +32,7 @@
     "howItWorks": "How it works",
     "features": "Features",
     "pricing": "Pricing",
+    "faq": "FAQ",
     "contact": "Contact"
   },
   "hero": {
@@ -372,7 +376,9 @@
       "message": "Message",
       "messagePlaceholder": "Tell us about your fleet, loads, current tools and what you want to improve...",
       "messageHint": "At least 5 characters.",
-      "privacy": "I agree that ProGo may contact me regarding my inquiry.",
+      "privacyPrefix": "I agree to the",
+      "privacyLink": "Privacy Policy",
+      "privacySuffix": "and allow ProGo to contact me about my inquiry.",
       "submit": "Send message",
       "submitting": "Sending...",
       "sendAnother": "Send another message",
@@ -398,5 +404,119 @@
     "taglineHeading": "Tagline",
     "copyright": "© {year} ProGo",
     "osTagline": "One shared logistics operating system."
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Frequently asked questions",
+    "description": "Quick answers about ProGo, the free trial and how we work with carriers, shippers and producers.",
+    "items": {
+      "whatIsProgo": {
+        "q": "What is ProGo?",
+        "a": "ProGo is a shared logistics operating system — one live platform for vehicles, loads, GPS, statuses, documents, team chat and accounting. It replaces scattered customer portals, WhatsApp groups and spreadsheets."
+      },
+      "whoFor": {
+        "q": "Who is ProGo for?",
+        "a": "Carriers and fleet owners, dispatchers, drivers, freight clients, producers and forwarders who want one map and one workflow instead of dozens of disconnected tools."
+      },
+      "freeTrial": {
+        "q": "How does the 30-day free trial work?",
+        "a": "You get full platform access for 30 days — vehicles, loads, GPS, statuses, documents and team chat. No commitment. If ProGo is not a fit, you can walk away anytime."
+      },
+      "afterTrial": {
+        "q": "What happens after the trial?",
+        "a": "If you like ProGo, choose a plan based on the number of users. Pricing is transparent on our website. If not, simply stop — no traps or hidden fees."
+      },
+      "difference": {
+        "q": "How is ProGo different from a CRM or customer portal?",
+        "a": "Portals and CRMs are usually isolated per company. ProGo is one live system where carriers, drivers, dispatchers and clients work together on the same map and data — in real time."
+      },
+      "driverApp": {
+        "q": "Is there a mobile app for drivers?",
+        "a": "Yes. Drivers use the ProGo mobile app for statuses, documents, chat and GPS — connected to the same live map your dispatchers see."
+      },
+      "pricingModel": {
+        "q": "How is pricing calculated?",
+        "a": "Plans are based on the number of users. All plans include full ProGo functionality. Discounts are available for 6-month and annual billing."
+      },
+      "dataPrivacy": {
+        "q": "How do you handle my data?",
+        "a": "We process contact and account data only to provide the service and respond to inquiries. See our Privacy Policy for details on cookies, retention and your rights."
+      },
+      "howToStart": {
+        "q": "How do I get started?",
+        "a": "Open the platform to start your free month, or contact us through the form below. We typically reply within 24 hours on business days."
+      }
+    }
+  },
+  "privacy": {
+    "label": "Legal",
+    "title": "Privacy Policy",
+    "updated": "Last updated: July 2026",
+    "backHome": "Back to homepage",
+    "meta": {
+      "title": "Privacy Policy — ProGo",
+      "description": "How ProGo collects, uses and protects personal data on progo.one and the ProGo platform."
+    },
+    "sections": {
+      "intro": {
+        "title": "Overview",
+        "paragraphs": [
+          "ProGo (\"we\", \"us\") operates progo.one and the ProGo logistics platform. This policy explains what personal data we collect, why we collect it, and your rights under applicable data protection laws including the GDPR.",
+          "By using our website or contacting us, you acknowledge this policy."
+        ]
+      },
+      "dataCollected": {
+        "title": "Data we collect",
+        "paragraphs": [
+          "Website contact form: name, email address, company name (optional), role (optional), message content and browser locale.",
+          "Website usage: anonymised analytics via Vercel Analytics (page views, referrers).",
+          "Platform accounts: data you provide when using ProGo services is governed by your service agreement."
+        ]
+      },
+      "howWeUse": {
+        "title": "How we use data",
+        "paragraphs": [
+          "To respond to your inquiries and provide customer support.",
+          "To send transactional emails related to your contact request.",
+          "To improve our website and understand aggregate traffic patterns.",
+          "We do not sell your personal data to third parties."
+        ]
+      },
+      "contactForm": {
+        "title": "Contact form & email",
+        "paragraphs": [
+          "When you submit the contact form, your message is sent to our team at admin@progo.one via a secure email delivery service (Resend).",
+          "We use your email as Reply-To so we can respond directly to you."
+        ]
+      },
+      "cookies": {
+        "title": "Cookies & analytics",
+        "paragraphs": [
+          "We use Vercel Analytics to measure website traffic. This service may use cookies or similar technologies in anonymised form.",
+          "The contact form uses session storage in your browser to avoid counting duplicate page views in our public view counter."
+        ]
+      },
+      "retention": {
+        "title": "Data retention",
+        "paragraphs": [
+          "Contact form submissions are retained as long as needed to handle your inquiry and for legitimate business records, typically up to 24 months unless a longer period is required by law.",
+          "You may request deletion of your contact data at any time."
+        ]
+      },
+      "rights": {
+        "title": "Your rights",
+        "paragraphs": [
+          "Depending on your location, you may have the right to access, correct, delete or restrict processing of your personal data, and to object or withdraw consent.",
+          "To exercise these rights, contact us at admin@progo.one. You may also lodge a complaint with your local data protection authority."
+        ]
+      },
+      "contact": {
+        "title": "Contact",
+        "paragraphs": [
+          "For privacy-related questions: admin@progo.one",
+          "Website: progo.one"
+        ]
+      }
+    }
   }
 }

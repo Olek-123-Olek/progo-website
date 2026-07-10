@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/Button";
 import { ProGoLogo } from "@/components/ui/ProGoLogo";
 import { Icon } from "@/components/ui/Icon";
@@ -90,7 +91,12 @@ export function Footer() {
         <div className="section-divider mt-12 mb-6" />
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-text-muted">
-          <p>{t("copyright", { year: COPYRIGHT_YEAR })}</p>
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+            <p>{t("copyright", { year: COPYRIGHT_YEAR })}</p>
+            <Link href="/privacy" className="hover:text-cyan-soft transition-colors">
+              {tc("privacyPolicy")}
+            </Link>
+          </div>
           <p>{tc("tagline")}</p>
         </div>
       </div>

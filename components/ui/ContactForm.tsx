@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { useLocale, useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 import { CONTACT_EMAIL } from "@/lib/constants";
@@ -196,7 +197,13 @@ export function ContactForm() {
           className="contact-checkbox"
           disabled={status === "submitting"}
         />
-        <span>{t("privacy")}</span>
+        <span>
+          {t("privacyPrefix")}{" "}
+          <Link href="/privacy" className="text-cyan-soft hover:underline">
+            {t("privacyLink")}
+          </Link>{" "}
+          {t("privacySuffix")}
+        </span>
       </label>
 
       <input

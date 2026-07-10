@@ -10,11 +10,13 @@ import { ViewCounter } from "@/components/ui/ViewCounter";
 import { ProGoLogo } from "@/components/ui/ProGoLogo";
 import { Icon } from "@/components/ui/Icon";
 import { LINKS, NAV_ITEMS } from "@/lib/constants";
+import { useActiveSection } from "@/lib/use-active-section";
 
 export function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const isHome = pathname === "/";
+  const activeSection = useActiveSection(isHome);
   const t = useTranslations("nav");
   const tc = useTranslations("common");
 
@@ -27,15 +29,22 @@ export function Header() {
         </Link>
 
         <nav className="hidden items-center gap-5 lg:gap-6 xl:flex">
-          {NAV_ITEMS.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="text-sm text-text-secondary transition-colors hover:text-cyan-soft whitespace-nowrap"
-            >
-              {t(item.key)}
-            </a>
-          ))}
+          {NAV_ITEMS.map((item) => {
+            const isActive = isHome && activeSection === item.href;
+            return (
+              <a
+                key={item.href}
+                href={item.href}
+                className={`text-sm whitespace-nowrap transition-colors ${
+                  isActive
+                    ? "text-cyan-soft font-medium"
+                    : "text-text-secondary hover:text-cyan-soft"
+                }`}
+              >
+                {t(item.key)}
+              </a>
+            );
+          })}
         </nav>
 
         <div className="hidden items-center gap-2 md:flex">
@@ -73,16 +82,19 @@ export function Header() {
             </div>
           )}
           <nav className="flex flex-col gap-4">
-            {NAV_ITEMS.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="text-text-secondary hover:text-cyan-soft"
-                onClick={() => setOpen(false)}
-              >
-                {t(item.key)}
-              </a>
-            ))}
+            {NAV_ITEMS.map((item) => {
+              const isActive = isHome && activeSection === item.href;
+              return (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className={isActive ? "text-cyan-soft font-medium" : "text-text-secondary hover:text-cyan-soft"}
+                  onClick={() => setOpen(false)}
+                >
+                  {t(item.key)}
+                </a>
+              );
+            })}
             <div className="flex flex-col gap-2 pt-2">
               <Button href={LINKS.platform} size="sm" external className="w-full">
                 {tc("openPlatform")}

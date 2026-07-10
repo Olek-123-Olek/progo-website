@@ -25,7 +25,8 @@ type IconName =
   | "platform"
   | "logo"
   | "spark"
-  | "check";
+  | "check"
+  | "chevron";
 
 interface IconProps extends SVGProps<SVGSVGElement> {
   name: IconName;
@@ -215,6 +216,16 @@ export function Icon({ name, size = 24, className = "", ...props }: IconProps) {
     check: (
       <path
         d="M5 12L10 17L19 7"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
+      />
+    ),
+    chevron: (
+      <path
+        d="M6 9L12 15L18 9"
         stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"

@@ -2,7 +2,9 @@
   "meta": {
     "title": "ProGo — Tutta la logistica. Una mappa.",
     "description": "ProGo è un sistema operativo logistico condiviso per vettori, dispatcher, autisti, clienti e spedizionieri. Non un altro portale — una piattaforma live per veicoli, carichi, GPS, stati, documenti, chat e contabilità.",
-    "ogDescription": "Sistema operativo logistico condiviso per vettori, autisti, dispatcher e clienti. Basta saltare tra WhatsApp, Excel e portali clienti."
+    "ogDescription": "Sistema operativo logistico condiviso per vettori, autisti, dispatcher e clienti. Basta saltare tra WhatsApp, Excel e portali clienti.",
+    "ogTitle": "Una piattaforma. Tutta la logistica. Una mappa.",
+    "ogTagline": "Tutta la logistica. Una mappa."
   },
   "common": {
     "tagline": "Tutta la logistica. Una mappa.",
@@ -10,6 +12,7 @@
     "contact": "Contatto",
     "contactUs": "Contattaci",
     "getInTouch": "Contattaci",
+    "privacyPolicy": "Informativa sulla privacy",
     "joinFacebook": "Unisciti su Facebook",
     "facebookCommunity": "Community Facebook",
     "live": "LIVE",
@@ -29,6 +32,7 @@
     "howItWorks": "Come funziona",
     "features": "Funzioni",
     "pricing": "Prezzi",
+    "faq": "FAQ",
     "contact": "Contatto"
   },
   "hero": {
@@ -243,7 +247,9 @@
       "message": "Messaggio",
       "messagePlaceholder": "Descrivi flotta, carichi, strumenti attuali e cosa vuoi migliorare...",
       "messageHint": "Almeno 5 caratteri.",
-      "privacy": "Accetto che ProGo mi contatti riguardo alla mia richiesta.",
+      "privacyPrefix": "Accetto l'",
+      "privacyLink": "Informativa sulla privacy",
+      "privacySuffix": "e autorizzo ProGo a contattarmi riguardo alla mia richiesta.",
       "submit": "Invia messaggio",
       "submitting": "Invio in corso...",
       "sendAnother": "Invia un altro messaggio",
@@ -266,5 +272,38 @@
     "about": "Sistema operativo logistico condiviso per vettori, dispatcher, autisti, clienti e spedizionieri.",
     "platform": "Piattaforma", "community": "Community", "taglineHeading": "Slogan",
     "copyright": "© {year} ProGo", "osTagline": "Sistema operativo logistico condiviso."
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Domande frequenti",
+    "description": "Risposte rapide su ProGo, la prova gratuita e come lavoriamo con vettori, spedizionieri e produttori.",
+    "items": {
+      "whatIsProgo": { "q": "Cos'è ProGo?", "a": "ProGo è un sistema operativo logistico condiviso — una piattaforma live per veicoli, carichi, GPS, stati, documenti, chat di team e contabilità. Sostituisce portali clienti, gruppi WhatsApp e fogli di calcolo." },
+      "whoFor": { "q": "Per chi è ProGo?", "a": "Vettori, dispatcher, autisti, clienti merci, produttori e spedizionieri che vogliono una mappa e un flusso di lavoro unico." },
+      "freeTrial": { "q": "Come funziona la prova di 30 giorni?", "a": "Accesso completo per 30 giorni, senza impegno. Se ProGo non fa per voi, potete uscire in qualsiasi momento." },
+      "afterTrial": { "q": "Cosa succede dopo la prova?", "a": "Scegliete un piano in base al numero di utenti. Prezzi trasparenti sul sito — nessun costo nascosto." },
+      "difference": { "q": "In cosa differisce ProGo da un CRM o portale clienti?", "a": "I portali sono spesso isolati. ProGo è un sistema live dove tutti lavorano sulla stessa mappa e sugli stessi dati — in tempo reale." },
+      "driverApp": { "q": "C'è un'app mobile per gli autisti?", "a": "Sì. Gli autisti usano l'app ProGo per stati, documenti, chat e GPS — collegata alla stessa mappa live dei dispatcher." },
+      "pricingModel": { "q": "Come si calcola il prezzo?", "a": "In base al numero di utenti. Tutti i piani con funzionalità complete. Sconti per fatturazione semestrale e annuale." },
+      "dataPrivacy": { "q": "Come proteggete i miei dati?", "a": "Trattiamo i dati solo per fornire il servizio e rispondere alle richieste. Dettagli nella nostra Informativa sulla privacy." },
+      "howToStart": { "q": "Come iniziare?", "a": "Aprite la piattaforma o contattateci tramite il modulo. Rispondiamo di solito entro 24 ore." }
+    }
+  },
+  "privacy": {
+    "label": "Legale",
+    "title": "Informativa sulla privacy",
+    "updated": "Ultimo aggiornamento: luglio 2026",
+    "backHome": "Torna alla home",
+    "meta": { "title": "Informativa sulla privacy — ProGo", "description": "Come ProGo raccoglie, utilizza e protegge i dati personali su progo.one." },
+    "sections": {
+      "intro": { "title": "Panoramica", "paragraphs": ["ProGo gestisce progo.one e la piattaforma ProGo. Questa informativa spiega quali dati raccogliamo e i vostri diritti secondo il GDPR.", "Usando il sito, accettate questa informativa."] },
+      "dataCollected": { "title": "Dati raccolti", "paragraphs": ["Modulo contatti: nome, email, azienda, ruolo, messaggio, lingua del browser.", "Analytics: traffico anonimo tramite Vercel Analytics.", "Account piattaforma: secondo il contratto di servizio."] },
+      "howWeUse": { "title": "Uso dei dati", "paragraphs": ["Per rispondere alle richieste e supporto.", "Per email relative alla vostra richiesta.", "Per migliorare il sito.", "Non vendiamo dati personali."] },
+      "contactForm": { "title": "Modulo ed email", "paragraphs": ["I messaggi vanno a admin@progo.one tramite Resend.", "La vostra email è Reply-To per risposte dirette."] },
+      "cookies": { "title": "Cookie", "paragraphs": ["Vercel Analytics per misurare il traffico.", "Session storage per il contatore visualizzazioni."] },
+      "retention": { "title": "Conservazione", "paragraphs": ["Richieste conservate fino a 24 mesi salvo obblighi di legge.", "Cancellazione su richiesta."] },
+      "rights": { "title": "I vostri diritti", "paragraphs": ["Accesso, rettifica, cancellazione, limitazione — secondo il GDPR.", "Contatto: admin@progo.one. Reclamo all'autorità di protezione dati."] },
+      "contact": { "title": "Contatto", "paragraphs": ["Privacy: admin@progo.one", "Sito: progo.one"] }
+    }
   }
 }

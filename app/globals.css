@@ -976,6 +976,43 @@ body {
   border-color: rgba(0, 229, 255, 0.25);
 }
 
+/* FAQ accordion */
+.faq-trigger {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.125rem 1.25rem;
+  text-align: left;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.faq-trigger:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.faq-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.faq-panel > p {
+  overflow: hidden;
+}
+
+.faq-panel-open {
+  grid-template-rows: 1fr;
+}
+
+.faq-panel-open > p {
+  padding: 0 1.25rem 1.125rem;
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;

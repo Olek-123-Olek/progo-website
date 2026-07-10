@@ -5,6 +5,7 @@ import { getMessages, getTranslations, setRequestLocale } from "next-intl/server
 import { notFound } from "next/navigation";
 import { Geist, Geist_Mono } from "next/font/google";
 import { routing, type Locale } from "@/i18n/routing";
+import { SITE_URL } from "@/lib/site";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -30,6 +31,7 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "meta" });
 
   return {
+    metadataBase: new URL(SITE_URL),
     title: t("title"),
     description: t("description"),
     openGraph: {
@@ -38,6 +40,7 @@ export async function generateMetadata({
       type: "website",
       locale: locale === "uk" ? "uk_UA" : `${locale}_${locale.toUpperCase()}`,
       siteName: "ProGo",
+      url: `${SITE_URL}/${locale}`,
     },
     twitter: {
       card: "summary_large_image",

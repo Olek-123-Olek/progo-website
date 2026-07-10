@@ -11,6 +11,7 @@ import { Features } from "@/components/sections/Features";
 import { TrustStrip } from "@/components/sections/TrustStrip";
 import { Pricing } from "@/components/sections/Pricing";
 import { ContactSection } from "@/components/sections/ContactSection";
+import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { SocialLinks } from "@/components/sections/SocialLinks";
 import { type Locale } from "@/i18n/routing";
@@ -43,6 +44,7 @@ export default async function HomePage({
         <div className="section-divider mx-auto max-w-7xl" />
         <Pricing />
         <FinalCta />
+        <Faq />
         <ContactSection />
         <SocialLinks />
       </main>
