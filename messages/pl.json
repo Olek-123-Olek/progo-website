@@ -9,7 +9,7 @@
     "openPlatform": "Otwórz platformę",
     "contact": "Kontakt",
     "contactUs": "Skontaktuj się",
-    "contactAdmin": "Kontakt admin@progo.one",
+    "getInTouch": "Napisz do nas",
     "joinFacebook": "Dołącz na Facebooku",
     "facebookCommunity": "Społeczność Facebook",
     "live": "NA ŻYWO",
@@ -216,6 +216,44 @@
     "description": "Dołącz do ProGo i zastąp rozproszone portale jednym systemem na żywo."
   },
   "social": { "text": "Śledź ProGo i dołącz do społeczności logistycznej" },
+  "contact": {
+    "badge": "Kontakt",
+    "title": "Porozmawiaj z zespołem ProGo",
+    "description": "Opowiedz nam o swojej operacji logistycznej. Pomożemy zrozumieć, jak ProGo może zastąpić rozproszone portale jednym systemem na żywo.",
+    "point1": "Odpowiedź w ciągu 24 godzin w dni robocze.",
+    "point2": "Demo i wsparcie wdrożenia dla przewoźników, nadawców i producentów.",
+    "point3": "Bez spamu — Twoje dane służą wyłącznie do odpowiedzi na zapytanie.",
+    "emailNote": "Wolisz e-mail? Napisz bezpośrednio na",
+    "form": {
+      "name": "Imię i nazwisko",
+      "namePlaceholder": "Jan Kowalski",
+      "email": "E-mail służbowy",
+      "emailPlaceholder": "ty@firma.pl",
+      "company": "Firma",
+      "companyPlaceholder": "Twoja firma (opcjonalnie)",
+      "role": "Jestem",
+      "rolePlaceholder": "Wybierz rolę (opcjonalnie)",
+      "roles": {
+        "carrier": "Przewoźnik",
+        "shipper": "Nadawca / Klient",
+        "producer": "Producent",
+        "forwarder": "Spedytor",
+        "other": "Inne"
+      },
+      "message": "Wiadomość",
+      "messagePlaceholder": "Opisz flotę, ładunki, obecne narzędzia i co chcesz usprawnić...",
+      "privacy": "Zgadzam się, aby ProGo skontaktowało się ze mną w sprawie zapytania.",
+      "submit": "Wyślij wiadomość",
+      "submitting": "Wysyłanie...",
+      "sendAnother": "Wyślij kolejną wiadomość",
+      "successTitle": "Wiadomość wysłana",
+      "successBody": "Dziękujemy! Nasz zespół odpowie w ciągu 24 godzin.",
+      "errorTitle": "Nie udało się wysłać wiadomości",
+      "errorBody": "Spróbuj ponownie lub napisz bezpośrednio na",
+      "rateLimit": "Zbyt wiele prób. Poczekaj chwilę lub napisz bezpośrednio.",
+      "responseTime": "Zwykle odpowiadamy w ciągu 24 godzin."
+    }
+  },
   "footer": {
     "about": "Wspólny system operacyjny logistyki dla przewoźników, dyspozytorów, kierowców, klientów i spedytorów.",
     "platform": "Platforma", "community": "Społeczność", "taglineHeading": "Slogan",

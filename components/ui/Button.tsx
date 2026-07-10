@@ -6,6 +6,7 @@ type ButtonSize = "sm" | "md" | "lg";
 interface ButtonProps {
   href?: string;
   onClick?: () => void;
+  type?: "button" | "submit";
   variant?: ButtonVariant;
   size?: ButtonSize;
   disabled?: boolean;
@@ -34,6 +35,7 @@ const sizeStyles: Record<ButtonSize, string> = {
 export function Button({
   href,
   onClick,
+  type = "button",
   variant = "primary",
   size = "md",
   disabled = false,
@@ -60,7 +62,7 @@ export function Button({
 
   return (
     <button
-      type="button"
+      type={type}
       onClick={onClick}
       disabled={disabled}
       className={styles}

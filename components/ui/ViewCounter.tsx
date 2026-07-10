@@ -12,9 +12,26 @@ type ViewCounterProps = {
   compact?: boolean;
 };
 
+const POLL_MS = 15_000;
+
 function sessionKeyForToday(): string {
   const today = new Date().toLocaleDateString("en-CA", { timeZone: "Europe/Warsaw" });
   return `progo-view-${today}`;
+}
+
+async function fetchViewStats(method: "GET" | "POST"): Promise<ViewStats | null> {
+  const res = await fetch(`/api/views?t=${Date.now()}`, {
+    method,
+    cache: "no-store",
+    headers: { "Cache-Control": "no-cache" },
+  });
+
+  if (!res.ok) return null;
+
+  const data = (await res.json()) as { today: number | null; month: number | null };
+  if (data.today === null || data.month === null) return null;
+
+  return { today: data.today, month: data.month };
 }
 
 export function ViewCounter({ compact = false }: ViewCounterProps) {
@@ -22,21 +39,37 @@ export function ViewCounter({ compact = false }: ViewCounterProps) {
   const locale = useLocale();
   const [stats, setStats] = useState<ViewStats | null>(null);
   const [loading, setLoading] = useState(true);
+  const [pulse, setPulse] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
 
-    async function load() {
-      try {
-        const alreadyRecorded = sessionStorage.getItem(sessionKeyForToday());
-        const res = await fetch("/api/views", { method: alreadyRecorded ? "GET" : "POST" });
-        const data = (await res.json()) as { today: number | null; month: number | null };
+    function applyStats(next: ViewStats) {
+      if (cancelled) return;
 
-        if (!cancelled && data.today !== null && data.month !== null) {
-          setStats({ today: data.today, month: data.month });
-          if (!alreadyRecorded) {
-            sessionStorage.setItem(sessionKeyForToday(), "1");
-          }
+      setStats((prev) => {
+        if (prev && (prev.today !== next.today || prev.month !== next.month)) {
+          setPulse(true);
+          window.setTimeout(() => setPulse(false), 600);
+        }
+        return next;
+      });
+    }
+
+    async function refresh() {
+      const data = await fetchViewStats("GET");
+      if (data) applyStats(data);
+    }
+
+    async function init() {
+      try {
+        const key = sessionKeyForToday();
+        const alreadyRecorded = sessionStorage.getItem(key);
+        const data = await fetchViewStats(alreadyRecorded ? "GET" : "POST");
+
+        if (data) {
+          applyStats(data);
+          if (!alreadyRecorded) sessionStorage.setItem(key, "1");
         }
       } catch {
         /* optional */
@@ -45,9 +78,18 @@ export function ViewCounter({ compact = false }: ViewCounterProps) {
       }
     }
 
-    load();
+    const onVisible = () => {
+      if (document.visibilityState === "visible") void refresh();
+    };
+
+    void init();
+    const intervalId = setInterval(() => void refresh(), POLL_MS);
+    document.addEventListener("visibilitychange", onVisible);
+
     return () => {
       cancelled = true;
+      clearInterval(intervalId);
+      document.removeEventListener("visibilitychange", onVisible);
     };
   }, []);
 
@@ -59,7 +101,7 @@ export function ViewCounter({ compact = false }: ViewCounterProps) {
 
   return (
     <div
-      className={`view-counter-pill ${compact ? "view-counter-pill-compact" : ""} ${loading ? "view-counter-pill-loading" : ""}`}
+      className={`view-counter-pill ${compact ? "view-counter-pill-compact" : ""} ${loading ? "view-counter-pill-loading" : ""} ${pulse ? "view-counter-pill-pulse" : ""}`}
       aria-live="polite"
       aria-label={t("ariaLabel")}
     >

@@ -1,3 +1,4 @@
+import { getKvClient } from "@/lib/kv";
 import { promises as fs } from "fs";
 import path from "path";
 
@@ -20,35 +21,6 @@ function dayKey(date = new Date()): string {
 
 function monthKey(date = new Date()): string {
   return dayKey(date).slice(0, 7);
-}
-
-function kvConfigured() {
-  return Boolean(process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN);
-}
-
-async function kvFetch<T>(pathSuffix: string): Promise<T | null> {
-  const base = process.env.KV_REST_API_URL;
-  const token = process.env.KV_REST_API_TOKEN;
-  if (!base || !token) return null;
-
-  const res = await fetch(`${base}${pathSuffix}`, {
-    headers: { Authorization: `Bearer ${token}` },
-    cache: "no-store",
-  });
-
-  if (!res.ok) return null;
-  return res.json() as Promise<T>;
-}
-
-async function kvGet(key: string): Promise<number> {
-  const data = await kvFetch<{ result: number | null }>(`/get/${key}`);
-  if (!data || data.result === null) return 0;
-  return Number(data.result);
-}
-
-async function kvIncr(key: string): Promise<number> {
-  const data = await kvFetch<{ result: number }>(`/incr/${key}`);
-  return data?.result ?? 0;
 }
 
 function dayStorageKey(date = new Date()) {
@@ -77,23 +49,25 @@ async function writeLocalData(data: StoredData): Promise<void> {
   await fs.writeFile(DATA_FILE, JSON.stringify(data, null, 2));
 }
 
-async function readKvStats(): Promise<ViewStats | null> {
-  if (!kvConfigured()) return null;
+async function readKvStats(): Promise<ViewStats> {
+  const kv = getKvClient();
+  if (!kv) throw new Error("KV not configured");
 
   const [today, month] = await Promise.all([
-    kvGet(dayStorageKey()),
-    kvGet(monthStorageKey()),
+    kv.get<number>(dayStorageKey()),
+    kv.get<number>(monthStorageKey()),
   ]);
 
-  return { today, month };
+  return { today: today ?? 0, month: month ?? 0 };
 }
 
-async function incrementKvStats(): Promise<ViewStats | null> {
-  if (!kvConfigured()) return null;
+async function incrementKvStats(): Promise<ViewStats> {
+  const kv = getKvClient();
+  if (!kv) throw new Error("KV not configured");
 
   const [today, month] = await Promise.all([
-    kvIncr(dayStorageKey()),
-    kvIncr(monthStorageKey()),
+    kv.incr(dayStorageKey()),
+    kv.incr(monthStorageKey()),
   ]);
 
   return { today, month };
@@ -127,29 +101,35 @@ async function incrementLocalStats(): Promise<ViewStats> {
 }
 
 export async function getViewStats(): Promise<ViewStats> {
-  const kvStats = await readKvStats();
-  if (kvStats) return kvStats;
+  if (getKvClient()) {
+    try {
+      return await readKvStats();
+    } catch {
+      /* fall through to local */
+    }
+  }
 
   if (!process.env.VERCEL) {
     return readLocalStats();
   }
 
-  return readLocalStats().catch(() => ({ today: 0, month: 0 }));
+  return { today: 0, month: 0 };
 }
 
 export async function recordView(): Promise<ViewStats> {
-  try {
-    const kvStats = await incrementKvStats();
-    if (kvStats) return kvStats;
-  } catch {
-    /* fall through */
+  if (getKvClient()) {
+    try {
+      return await incrementKvStats();
+    } catch {
+      /* fall through */
+    }
   }
 
   if (!process.env.VERCEL) {
     return incrementLocalStats();
   }
 
-  return readLocalStats().catch(() => ({ today: 0, month: 0 }));
+  return { today: 0, month: 0 };
 }
 
 export function getSessionDayKey(): string {

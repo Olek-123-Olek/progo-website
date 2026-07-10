@@ -9,7 +9,7 @@
     "openPlatform": "Apri piattaforma",
     "contact": "Contatto",
     "contactUs": "Contattaci",
-    "contactAdmin": "Contatto admin@progo.one",
+    "getInTouch": "Contattaci",
     "joinFacebook": "Unisciti su Facebook",
     "facebookCommunity": "Community Facebook",
     "live": "LIVE",
@@ -216,6 +216,44 @@
     "description": "Unisciti a ProGo e sostituisci portali frammentati con un sistema live."
   },
   "social": { "text": "Segui ProGo e unisciti alla community logistica" },
+  "contact": {
+    "badge": "Contatto",
+    "title": "Parla con il team ProGo",
+    "description": "Raccontaci la tua operazione logistica. Ti aiuteremo a capire come ProGo può sostituire portali frammentati con una piattaforma live.",
+    "point1": "Risposta entro 24 ore nei giorni lavorativi.",
+    "point2": "Demo e supporto onboarding per vettori, mittenti e produttori.",
+    "point3": "Niente spam — i tuoi dati servono solo per rispondere alla richiesta.",
+    "emailNote": "Preferisci l'email? Scrivi direttamente a",
+    "form": {
+      "name": "Nome completo",
+      "namePlaceholder": "Mario Rossi",
+      "email": "Email aziendale",
+      "emailPlaceholder": "tu@azienda.it",
+      "company": "Azienda",
+      "companyPlaceholder": "La tua azienda (opzionale)",
+      "role": "Sono",
+      "rolePlaceholder": "Seleziona ruolo (opzionale)",
+      "roles": {
+        "carrier": "Vettore",
+        "shipper": "Mittente / Cliente",
+        "producer": "Produttore",
+        "forwarder": "Spedizioniere",
+        "other": "Altro"
+      },
+      "message": "Messaggio",
+      "messagePlaceholder": "Descrivi flotta, carichi, strumenti attuali e cosa vuoi migliorare...",
+      "privacy": "Accetto che ProGo mi contatti riguardo alla mia richiesta.",
+      "submit": "Invia messaggio",
+      "submitting": "Invio in corso...",
+      "sendAnother": "Invia un altro messaggio",
+      "successTitle": "Messaggio inviato",
+      "successBody": "Grazie! Il nostro team risponderà entro 24 ore.",
+      "errorTitle": "Impossibile inviare il messaggio",
+      "errorBody": "Riprova o scrivi direttamente a",
+      "rateLimit": "Troppi tentativi. Attendi o scrivi direttamente.",
+      "responseTime": "Di solito rispondiamo entro 24 ore."
+    }
+  },
   "footer": {
     "about": "Sistema operativo logistico condiviso per vettori, dispatcher, autisti, clienti e spedizionieri.",
     "platform": "Piattaforma", "community": "Community", "taglineHeading": "Slogan",

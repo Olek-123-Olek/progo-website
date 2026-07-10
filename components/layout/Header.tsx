@@ -41,7 +41,7 @@ export function Header() {
         <div className="hidden items-center gap-2 md:flex">
           {isHome && <ViewCounter compact />}
           <LanguageSwitcher />
-          <Button href={LINKS.email} variant="ghost" size="sm">
+          <Button href={LINKS.contact} variant="ghost" size="sm">
             {tc("contact")}
           </Button>
           <Button href={LINKS.platform} size="sm" external>
@@ -90,7 +90,7 @@ export function Header() {
               <Button href={LINKS.platform} size="sm" external className="w-full">
                 {tc("openPlatform")}
               </Button>
-              <Button href={LINKS.email} variant="secondary" size="sm" className="w-full">
+              <Button href={LINKS.contact} variant="secondary" size="sm" className="w-full">
                 {tc("contactUs")}
               </Button>
             </div>

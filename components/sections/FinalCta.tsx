@@ -29,9 +29,9 @@ export function FinalCta() {
                 {tc("openPlatform")}
                 <Icon name="arrow" size={18} className="arrow-accent" />
               </Button>
-              <Button href={LINKS.email} variant="secondary" size="lg">
+              <Button href={LINKS.contact} variant="secondary" size="lg">
                 <Icon name="email" size={20} />
-                {tc("contactAdmin")}
+                {tc("contactUs")}
               </Button>
               <Button href={LINKS.facebook} variant="ghost" size="lg" external>
                 <Icon name="facebook" size={20} />

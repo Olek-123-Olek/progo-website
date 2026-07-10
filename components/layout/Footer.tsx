@@ -3,13 +3,14 @@ import { Button } from "@/components/ui/Button";
 import { ProGoLogo } from "@/components/ui/ProGoLogo";
 import { Icon } from "@/components/ui/Icon";
 import { COPYRIGHT_YEAR, LINKS } from "@/lib/constants";
+import { CONTACT_EMAIL } from "@/lib/constants";
 
 export function Footer() {
   const t = useTranslations("footer");
   const tc = useTranslations("common");
 
   return (
-    <footer id="contact" className="border-t border-white/5 bg-navy-950">
+    <footer className="border-t border-white/5 bg-navy-950">
       <div className="mx-auto max-w-7xl px-4 py-16 md:px-8">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           <div className="sm:col-span-2 lg:col-span-1">
@@ -41,7 +42,7 @@ export function Footer() {
                   className="flex items-center gap-2 text-sm text-text-secondary transition-colors hover:text-cyan-soft"
                 >
                   <Icon name="email" size={16} />
-                  admin@progo.one
+                  {CONTACT_EMAIL}
                 </a>
               </li>
             </ul>
@@ -98,7 +99,7 @@ export function Footer() {
           <p>{t("copyright", { year: COPYRIGHT_YEAR })}</p>
           <p>{tc("tagline")}</p>
           <a href={LINKS.email} className="hover:text-cyan-soft transition-colors">
-            admin@progo.one
+            {CONTACT_EMAIL}
           </a>
         </div>
       </div>

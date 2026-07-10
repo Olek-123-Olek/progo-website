@@ -10,6 +10,7 @@ import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Features } from "@/components/sections/Features";
 import { TrustStrip } from "@/components/sections/TrustStrip";
 import { Pricing } from "@/components/sections/Pricing";
+import { ContactSection } from "@/components/sections/ContactSection";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { SocialLinks } from "@/components/sections/SocialLinks";
 import { type Locale } from "@/i18n/routing";
@@ -42,6 +43,7 @@ export default async function HomePage({
         <div className="section-divider mx-auto max-w-7xl" />
         <Pricing />
         <FinalCta />
+        <ContactSection />
         <SocialLinks />
       </main>
       <Footer />

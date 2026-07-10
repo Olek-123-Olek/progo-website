@@ -9,7 +9,7 @@
     "openPlatform": "Plattform öffnen",
     "contact": "Kontakt",
     "contactUs": "Kontakt aufnehmen",
-    "contactAdmin": "Kontakt admin@progo.one",
+    "getInTouch": "Kontakt aufnehmen",
     "joinFacebook": "Facebook beitreten",
     "facebookCommunity": "Facebook-Community",
     "live": "LIVE",
@@ -222,6 +222,44 @@
     "description": "Treten Sie ProGo bei und ersetzen Sie fragmentierte Portale durch ein Live-System für Spediteure, Fahrer, Disponenten und Kunden."
   },
   "social": { "text": "Folgen Sie ProGo und treten Sie der Logistik-Community bei" },
+  "contact": {
+    "badge": "Kontakt",
+    "title": "Sprechen Sie mit dem ProGo-Team",
+    "description": "Erzählen Sie uns von Ihrer Logistikoperation. Wir zeigen Ihnen, wie ProGo fragmentierte Portale durch ein Live-System ersetzt.",
+    "point1": "Antwort innerhalb von 24 Stunden an Werktagen.",
+    "point2": "Demo und Onboarding für Spediteure, Versender und Produzenten.",
+    "point3": "Kein Spam — Ihre Daten werden nur zur Beantwortung Ihrer Anfrage genutzt.",
+    "emailNote": "Lieber per E-Mail? Schreiben Sie direkt an",
+    "form": {
+      "name": "Vollständiger Name",
+      "namePlaceholder": "Max Mustermann",
+      "email": "Geschäftliche E-Mail",
+      "emailPlaceholder": "sie@firma.de",
+      "company": "Unternehmen",
+      "companyPlaceholder": "Ihr Unternehmen (optional)",
+      "role": "Ich bin",
+      "rolePlaceholder": "Rolle wählen (optional)",
+      "roles": {
+        "carrier": "Spediteur",
+        "shipper": "Versender / Kunde",
+        "producer": "Produzent",
+        "forwarder": "Forwarder",
+        "other": "Sonstiges"
+      },
+      "message": "Nachricht",
+      "messagePlaceholder": "Beschreiben Sie Flotte, Ladungen, aktuelle Tools und Verbesserungswünsche...",
+      "privacy": "Ich stimme zu, dass ProGo mich bezüglich meiner Anfrage kontaktieren darf.",
+      "submit": "Nachricht senden",
+      "submitting": "Wird gesendet...",
+      "sendAnother": "Weitere Nachricht senden",
+      "successTitle": "Nachricht gesendet",
+      "successBody": "Vielen Dank! Unser Team meldet sich innerhalb von 24 Stunden.",
+      "errorTitle": "Nachricht konnte nicht gesendet werden",
+      "errorBody": "Bitte erneut versuchen oder direkt schreiben an",
+      "rateLimit": "Zu viele Versuche. Bitte warten oder direkt per E-Mail schreiben.",
+      "responseTime": "Wir antworten in der Regel innerhalb von 24 Stunden."
+    }
+  },
   "footer": {
     "about": "Ein gemeinsames Logistik-Betriebssystem für Spediteure, Disponenten, Fahrer, Kunden und Forwarder.",
     "platform": "Plattform", "community": "Community", "taglineHeading": "Slogan",
