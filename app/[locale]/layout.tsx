@@ -18,6 +18,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const OG_LOCALES: Record<string, string> = {
+  en: "en_US",
+  de: "de_DE",
+  it: "it_IT",
+  fr: "fr_FR",
+  uk: "uk_UA",
+  pl: "pl_PL",
+};
+
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
@@ -51,7 +60,10 @@ export async function generateMetadata({
       description: t("ogDescription"),
       type: "website",
       url: canonical,
-      locale: locale === "uk" ? "uk_UA" : `${locale}_${locale.toUpperCase()}`,
+      locale: OG_LOCALES[locale] ?? OG_LOCALES[routing.defaultLocale],
+      alternateLocale: routing.locales
+        .filter((loc) => loc !== locale)
+        .map((loc) => OG_LOCALES[loc]),
       siteName: "ProGo",
     },
     twitter: {
