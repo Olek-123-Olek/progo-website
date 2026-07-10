@@ -3,6 +3,8 @@ import { ContactForm } from "@/components/ui/ContactForm";
 import { Icon } from "@/components/ui/Icon";
 import { CONTACT_EMAIL } from "@/lib/constants";
 
+const CONTACT_POINT_KEYS = ["point1", "point2", "point3"] as const;
+
 export function ContactSection() {
   const t = useTranslations("contact");
 
@@ -19,26 +21,16 @@ export function ContactSection() {
             <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">{t("title")}</h2>
             <p className="text-lg text-text-secondary leading-relaxed mb-8">{t("description")}</p>
 
-            <div className="space-y-4">
-              <div className="flex items-start gap-3 text-text-secondary">
-                <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-cyan-glow/10 text-cyan-glow">
-                  <Icon name="check" size={16} />
-                </span>
-                <p className="text-sm leading-relaxed">{t("point1")}</p>
-              </div>
-              <div className="flex items-start gap-3 text-text-secondary">
-                <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-cyan-glow/10 text-cyan-glow">
-                  <Icon name="check" size={16} />
-                </span>
-                <p className="text-sm leading-relaxed">{t("point2")}</p>
-              </div>
-              <div className="flex items-start gap-3 text-text-secondary">
-                <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-cyan-glow/10 text-cyan-glow">
-                  <Icon name="check" size={16} />
-                </span>
-                <p className="text-sm leading-relaxed">{t("point3")}</p>
-              </div>
-            </div>
+            <ul className="space-y-4">
+              {CONTACT_POINT_KEYS.map((key) => (
+                <li key={key} className="flex items-start gap-3 text-text-secondary">
+                  <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-cyan-glow/10 text-cyan-glow">
+                    <Icon name="check" size={16} />
+                  </span>
+                  <p className="text-sm leading-relaxed">{t(key)}</p>
+                </li>
+              ))}
+            </ul>
 
             <p className="mt-8 text-sm text-text-muted">
               {t("emailNote")}{" "}
