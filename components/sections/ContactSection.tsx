@@ -7,7 +7,7 @@ export function ContactSection() {
   const t = useTranslations("contact");
 
   return (
-    <section id="contact" className="relative py-20 md:py-28 scroll-mt-24">
+    <section id="contact" className="relative py-20 md:py-28">
       <div className="absolute inset-0 bg-mesh opacity-30 pointer-events-none" />
       <div className="relative mx-auto max-w-7xl px-4 md:px-8">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-14 items-start">
