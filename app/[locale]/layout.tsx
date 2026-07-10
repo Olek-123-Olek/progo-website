@@ -5,6 +5,7 @@ import { getMessages, getTranslations, setRequestLocale } from "next-intl/server
 import { notFound } from "next/navigation";
 import { Geist, Geist_Mono } from "next/font/google";
 import { routing, type Locale } from "@/i18n/routing";
+import { LINKS, SITE_URL } from "@/lib/constants";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -29,13 +30,27 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
 
+  const canonical = `${SITE_URL}/${locale}`;
+  const languages = Object.fromEntries(
+    routing.locales.map((loc) => [loc, `${SITE_URL}/${loc}`]),
+  );
+
   return {
+    metadataBase: new URL(SITE_URL),
     title: t("title"),
     description: t("description"),
+    alternates: {
+      canonical,
+      languages: {
+        ...languages,
+        "x-default": `${SITE_URL}/${routing.defaultLocale}`,
+      },
+    },
     openGraph: {
       title: t("title"),
       description: t("ogDescription"),
       type: "website",
+      url: canonical,
       locale: locale === "uk" ? "uk_UA" : `${locale}_${locale.toUpperCase()}`,
       siteName: "ProGo",
     },
@@ -63,6 +78,25 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
   const messages = await getMessages();
+  const t = await getTranslations({ locale, namespace: "meta" });
+
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "ProGo",
+      url: SITE_URL,
+      description: t("description"),
+      sameAs: [LINKS.facebook],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "ProGo",
+      url: SITE_URL,
+      inLanguage: locale,
+    },
+  ];
 
   return (
     <html lang={locale} className="dark" suppressHydrationWarning>
@@ -70,6 +104,10 @@ export default async function LocaleLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-navy-950 text-text-primary`}
         suppressHydrationWarning
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>

@@ -1,5 +1,9 @@
 export const CONTACT_EMAIL = "admin@progo.one";
 
+export const SITE_URL = (
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://progo.one"
+).replace(/\/$/, "");
+
 export const LINKS = {
   platform: "https://progo-davos.vercel.app/login",
   facebook:
