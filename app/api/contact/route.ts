@@ -13,12 +13,6 @@ function clientIp(request: Request): string {
 
 export async function POST(request: Request) {
   try {
-    const ip = clientIp(request);
-    const allowed = await checkRateLimit(`progo:contact:${ip}`, 5, 3600);
-    if (!allowed) {
-      return Response.json({ ok: false, error: "rate_limit" }, { status: 429 });
-    }
-
     const body = await request.json();
     const validated = validateContactPayload(body);
 
@@ -28,6 +22,12 @@ export async function POST(request: Request) {
 
     if (!validated.data.privacyAccepted) {
       return Response.json({ ok: false, error: "privacy_required" }, { status: 400 });
+    }
+
+    const ip = clientIp(request);
+    const allowed = await checkRateLimit(`progo:contact:${ip}`, 10, 3600);
+    if (!allowed) {
+      return Response.json({ ok: false, error: "rate_limit" }, { status: 429 });
     }
 
     await sendContactEmail(validated.data);
