@@ -64,10 +64,10 @@ export function HeroOperationsMap() {
       <div className="hero-command-stage" aria-label={t("ariaLabel")}>
         <div className="hero-command-map-frame">
           <Image
-            src="/images/hero-platform-map.png"
+            src="/images/hero-platform-map.jpg"
             alt={t("screenshotAlt")}
-            width={1920}
-            height={1080}
+            width={1024}
+            height={512}
             className="hero-platform-screenshot w-full h-auto"
             priority
             sizes="(max-width: 768px) 100vw, 55vw"
