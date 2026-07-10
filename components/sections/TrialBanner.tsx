@@ -35,7 +35,7 @@ export function TrialBanner() {
                 </span>
               </div>
 
-              <h2 className="text-2xl font-bold leading-tight text-text-primary md:text-3xl lg:text-4xl">
+              <p className="text-2xl font-bold leading-tight text-text-primary md:text-3xl lg:text-4xl">
                 {t.rich("title", {
                   highlight: (chunks) => (
                     <span className="bg-gradient-to-r from-cyan-soft via-cyan-glow to-purple-400 bg-clip-text text-transparent">
@@ -43,7 +43,7 @@ export function TrialBanner() {
                     </span>
                   ),
                 })}
-              </h2>
+              </p>
 
               <p className="mt-3 max-w-2xl text-base leading-relaxed text-text-secondary md:text-lg">
                 {t("subtitle")}

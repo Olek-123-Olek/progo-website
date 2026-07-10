@@ -55,6 +55,8 @@ export function Header() {
             className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10"
             onClick={() => setOpen(!open)}
             aria-label={tc("toggleMenu")}
+            aria-expanded={open}
+            aria-controls="mobile-menu"
           >
             <span className="flex flex-col gap-1.5">
               <span className={`block h-0.5 w-5 bg-text-primary transition-transform ${open ? "translate-y-2 rotate-45" : ""}`} />
@@ -66,7 +68,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-white/5 bg-navy-950/95 px-4 py-4 md:hidden">
+        <div id="mobile-menu" className="border-t border-white/5 bg-navy-950/95 px-4 py-4 md:hidden">
           {isHome && (
             <div className="mb-4 flex justify-center">
               <ViewCounter />
