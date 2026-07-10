@@ -12,20 +12,18 @@ const ROLE_KEYS = ["carrier", "shipper", "producer", "forwarder", "other"] as co
 
 const MIN_MESSAGE_LENGTH = 5;
 
-const ERROR_KEYS = [
+const FIELD_ERROR_KEYS = [
   "invalid_message",
   "invalid_name",
   "invalid_email",
   "invalid_company",
   "privacy_required",
-  "rate_limit",
-  "send_failed",
 ] as const;
 
-type ErrorKey = (typeof ERROR_KEYS)[number];
+type FieldErrorKey = (typeof FIELD_ERROR_KEYS)[number];
 
-function isErrorKey(value: string): value is ErrorKey {
-  return (ERROR_KEYS as readonly string[]).includes(value);
+function isFieldErrorKey(value: string): value is FieldErrorKey {
+  return (FIELD_ERROR_KEYS as readonly string[]).includes(value);
 }
 
 export function ContactForm() {
@@ -211,16 +209,16 @@ export function ContactForm() {
       {status === "error" && (
         <div className="contact-form-error mt-4" role="alert">
           <p className="font-medium text-red-accent">{t("errorTitle")}</p>
-          <p className="text-sm text-text-secondary mt-1">
-            {errorKey && isErrorKey(errorKey) && errorKey !== "send_failed" && errorKey !== "rate_limit"
-              ? t(`errors.${errorKey}`)
-              : `${t("errorBody")} `}
-            {(errorKey === "send_failed" || errorKey === "rate_limit" || !errorKey) && (
+          {errorKey && isFieldErrorKey(errorKey) ? (
+            <p className="text-sm text-text-secondary mt-1">{t(`errors.${errorKey}`)}</p>
+          ) : (
+            <p className="text-sm text-text-secondary mt-1">
+              {t("errorBody")}{" "}
               <a href={`mailto:${CONTACT_EMAIL}`} className="text-cyan-soft hover:underline">
                 {CONTACT_EMAIL}
               </a>
-            )}
-          </p>
+            </p>
+          )}
           {errorKey === "rate_limit" && (
             <p className="text-sm text-text-muted mt-1">{t("rateLimit")}</p>
           )}
