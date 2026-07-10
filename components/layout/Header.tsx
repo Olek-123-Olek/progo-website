@@ -47,23 +47,20 @@ export function Header() {
           })}
         </nav>
 
-        <div className="hidden items-center gap-2 md:flex">
+        <div className="flex items-center gap-2">
           {isHome && <ViewCounter compact />}
           <LanguageSwitcher />
-          <Button href={LINKS.platform} size="sm" external>
+          <Button href={LINKS.platform} size="sm" external className="hidden md:inline-flex">
             {tc("openPlatform")}
             <Icon name="arrow" size={16} className="arrow-accent" />
           </Button>
-        </div>
-
-        <div className="flex items-center gap-2 md:hidden">
-          {isHome && <ViewCounter compact />}
-          <LanguageSwitcher />
           <button
             type="button"
-            className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10"
+            className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 xl:hidden"
             onClick={() => setOpen(!open)}
             aria-label={tc("toggleMenu")}
+            aria-expanded={open}
+            aria-controls="mobile-menu"
           >
             <span className="flex flex-col gap-1.5">
               <span className={`block h-0.5 w-5 bg-text-primary transition-transform ${open ? "translate-y-2 rotate-45" : ""}`} />
@@ -75,7 +72,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-white/5 bg-navy-950/95 px-4 py-4 md:hidden">
+        <div id="mobile-menu" className="border-t border-white/5 bg-navy-950/95 px-4 py-4 xl:hidden">
           {isHome && (
             <div className="mb-4 flex justify-center">
               <ViewCounter />
