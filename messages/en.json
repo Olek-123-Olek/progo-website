@@ -371,6 +371,7 @@
       },
       "message": "Message",
       "messagePlaceholder": "Tell us about your fleet, loads, current tools and what you want to improve...",
+      "messageHint": "At least 5 characters.",
       "privacy": "I agree that ProGo may contact me regarding my inquiry.",
       "submit": "Send message",
       "submitting": "Sending...",
@@ -380,7 +381,14 @@
       "errorTitle": "Could not send your message",
       "errorBody": "Please try again or email us directly at",
       "rateLimit": "Too many attempts. Please wait a while or email us directly.",
-      "responseTime": "We typically reply within 24 hours."
+      "responseTime": "We typically reply within 24 hours.",
+      "errors": {
+        "invalid_message": "Please write a bit more in your message (at least 5 characters).",
+        "invalid_name": "Please enter your full name.",
+        "invalid_email": "Please enter a valid email address.",
+        "invalid_company": "Company name is too long.",
+        "privacy_required": "Please accept the privacy consent to send your message."
+      }
     }
   },
   "footer": {

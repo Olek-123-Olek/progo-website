@@ -242,6 +242,7 @@
       },
       "message": "Messaggio",
       "messagePlaceholder": "Descrivi flotta, carichi, strumenti attuali e cosa vuoi migliorare...",
+      "messageHint": "Almeno 5 caratteri.",
       "privacy": "Accetto che ProGo mi contatti riguardo alla mia richiesta.",
       "submit": "Invia messaggio",
       "submitting": "Invio in corso...",
@@ -251,7 +252,14 @@
       "errorTitle": "Impossibile inviare il messaggio",
       "errorBody": "Riprova o scrivi direttamente a",
       "rateLimit": "Troppi tentativi. Attendi o scrivi direttamente.",
-      "responseTime": "Di solito rispondiamo entro 24 ore."
+      "responseTime": "Di solito rispondiamo entro 24 ore.",
+      "errors": {
+        "invalid_message": "Scrivi un po' di più nel messaggio (almeno 5 caratteri).",
+        "invalid_name": "Inserisci il nome completo.",
+        "invalid_email": "Inserisci un indirizzo email valido.",
+        "invalid_company": "Il nome dell'azienda è troppo lungo.",
+        "privacy_required": "Accetta il consenso privacy per inviare il messaggio."
+      }
     }
   },
   "footer": {

@@ -248,6 +248,7 @@
       },
       "message": "Nachricht",
       "messagePlaceholder": "Beschreiben Sie Flotte, Ladungen, aktuelle Tools und Verbesserungswünsche...",
+      "messageHint": "Mindestens 5 Zeichen.",
       "privacy": "Ich stimme zu, dass ProGo mich bezüglich meiner Anfrage kontaktieren darf.",
       "submit": "Nachricht senden",
       "submitting": "Wird gesendet...",
@@ -257,7 +258,14 @@
       "errorTitle": "Nachricht konnte nicht gesendet werden",
       "errorBody": "Bitte erneut versuchen oder direkt schreiben an",
       "rateLimit": "Zu viele Versuche. Bitte warten oder direkt per E-Mail schreiben.",
-      "responseTime": "Wir antworten in der Regel innerhalb von 24 Stunden."
+      "responseTime": "Wir antworten in der Regel innerhalb von 24 Stunden.",
+      "errors": {
+        "invalid_message": "Bitte schreiben Sie etwas mehr (mindestens 5 Zeichen).",
+        "invalid_name": "Bitte geben Sie Ihren vollständigen Namen ein.",
+        "invalid_email": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+        "invalid_company": "Der Firmenname ist zu lang.",
+        "privacy_required": "Bitte stimmen Sie der Datenschutzerklärung zu."
+      }
     }
   },
   "footer": {

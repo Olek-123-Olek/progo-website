@@ -10,6 +10,24 @@ type FormStatus = "idle" | "submitting" | "success" | "error";
 
 const ROLE_KEYS = ["carrier", "shipper", "producer", "forwarder", "other"] as const;
 
+const MIN_MESSAGE_LENGTH = 5;
+
+const ERROR_KEYS = [
+  "invalid_message",
+  "invalid_name",
+  "invalid_email",
+  "invalid_company",
+  "privacy_required",
+  "rate_limit",
+  "send_failed",
+] as const;
+
+type ErrorKey = (typeof ERROR_KEYS)[number];
+
+function isErrorKey(value: string): value is ErrorKey {
+  return (ERROR_KEYS as readonly string[]).includes(value);
+}
+
 export function ContactForm() {
   const t = useTranslations("contact.form");
   const locale = useLocale();
@@ -18,22 +36,37 @@ export function ContactForm() {
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setStatus("submitting");
-    setErrorKey(null);
 
     const form = event.currentTarget;
     const formData = new FormData(form);
+
+    const message = String(formData.get("message") ?? "").trim();
+
+    if (message.length < MIN_MESSAGE_LENGTH) {
+      setErrorKey("invalid_message");
+      setStatus("error");
+      return;
+    }
 
     const payload = {
       name: String(formData.get("name") ?? ""),
       email: String(formData.get("email") ?? ""),
       company: String(formData.get("company") ?? ""),
       role: String(formData.get("role") ?? ""),
-      message: String(formData.get("message") ?? ""),
+      message,
       privacyAccepted: formData.get("privacy") === "on",
       website: String(formData.get("website") ?? ""),
       locale,
     };
+
+    if (!payload.privacyAccepted) {
+      setErrorKey("privacy_required");
+      setStatus("error");
+      return;
+    }
+
+    setStatus("submitting");
+    setErrorKey(null);
 
     try {
       const res = await fetch("/api/contact", {
@@ -146,11 +179,13 @@ export function ContactForm() {
           id="contact-message"
           name="message"
           required
+          minLength={MIN_MESSAGE_LENGTH}
           rows={5}
           className="contact-input contact-textarea"
           placeholder={t("messagePlaceholder")}
           disabled={status === "submitting"}
         />
+        <p className="mt-1.5 text-xs text-text-muted">{t("messageHint")}</p>
       </div>
 
       <label className="contact-privacy mt-5">
@@ -177,10 +212,14 @@ export function ContactForm() {
         <div className="contact-form-error mt-4" role="alert">
           <p className="font-medium text-red-accent">{t("errorTitle")}</p>
           <p className="text-sm text-text-secondary mt-1">
-            {t("errorBody")}{" "}
-            <a href={`mailto:${CONTACT_EMAIL}`} className="text-cyan-soft hover:underline">
-              {CONTACT_EMAIL}
-            </a>
+            {errorKey && isErrorKey(errorKey) && errorKey !== "send_failed" && errorKey !== "rate_limit"
+              ? t(`errors.${errorKey}`)
+              : `${t("errorBody")} `}
+            {(errorKey === "send_failed" || errorKey === "rate_limit" || !errorKey) && (
+              <a href={`mailto:${CONTACT_EMAIL}`} className="text-cyan-soft hover:underline">
+                {CONTACT_EMAIL}
+              </a>
+            )}
           </p>
           {errorKey === "rate_limit" && (
             <p className="text-sm text-text-muted mt-1">{t("rateLimit")}</p>

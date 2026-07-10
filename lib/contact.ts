@@ -51,7 +51,7 @@ export function validateContactPayload(body: unknown): { ok: true; data: Contact
     return { ok: false, error: "invalid_email" };
   }
 
-  if (!message || message.length < 10 || message.length > 4000) {
+  if (!message || message.length < 5 || message.length > 4000) {
     return { ok: false, error: "invalid_message" };
   }
 

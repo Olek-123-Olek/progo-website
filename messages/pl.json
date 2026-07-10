@@ -242,6 +242,7 @@
       },
       "message": "Wiadomość",
       "messagePlaceholder": "Opisz flotę, ładunki, obecne narzędzia i co chcesz usprawnić...",
+      "messageHint": "Minimum 5 znaków.",
       "privacy": "Zgadzam się, aby ProGo skontaktowało się ze mną w sprawie zapytania.",
       "submit": "Wyślij wiadomość",
       "submitting": "Wysyłanie...",
@@ -251,7 +252,14 @@
       "errorTitle": "Nie udało się wysłać wiadomości",
       "errorBody": "Spróbuj ponownie lub napisz bezpośrednio na",
       "rateLimit": "Zbyt wiele prób. Poczekaj chwilę lub napisz bezpośrednio.",
-      "responseTime": "Zwykle odpowiadamy w ciągu 24 godzin."
+      "responseTime": "Zwykle odpowiadamy w ciągu 24 godzin.",
+      "errors": {
+        "invalid_message": "Napisz nieco więcej w wiadomości (minimum 5 znaków).",
+        "invalid_name": "Podaj imię i nazwisko.",
+        "invalid_email": "Podaj prawidłowy adres e-mail.",
+        "invalid_company": "Nazwa firmy jest zbyt długa.",
+        "privacy_required": "Zaznacz zgodę, aby wysłać wiadomość."
+      }
     }
   },
   "footer": {
