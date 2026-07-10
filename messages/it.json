@@ -26,6 +26,13 @@
     "billed": "fatturato {period}",
     "fullFunctionality": "funzionalità completa ProGo"
   },
+  "cookie": {
+    "title": "Preferenze cookie",
+    "message": "Usiamo analisi rispettose della privacy per capire il traffico. Puoi accettare l'analisi o solo i cookie essenziali.",
+    "accept": "Accetta analisi",
+    "essential": "Solo essenziali",
+    "privacy": "Informativa sulla privacy"
+  },
   "nav": {
     "problem": "Problema",
     "whyProgo": "Perché ProGo",
@@ -158,6 +165,30 @@
     "traditional": ["Molti portali — ogni cliente ha il proprio sistema", "Caos WhatsApp — aggiornamenti persi nelle chat", "CMR mancanti — documenti non collegati ai job", "Stati in ritardo — nessuno vede la verità live", "Penali e ritardi nei pagamenti", "Nessuna visibilità condivisa tra aziende"],
     "progo": ["Una mappa condivisa per tutta l'operazione", "Un piano live collegato ai dati reali", "Un workflow autista — GPS, stato, documenti", "Documenti collegati a ogni job", "Visibilità condivisa tra partner", "Contabilità collegata alle operazioni"]
   },
+  "comparison": {
+    "label": "Confronto",
+    "title": "ProGo vs WhatsApp, Excel e portali clienti",
+    "description": "La maggior parte dei team logistici usa chat di gruppo, fogli di calcolo e portali separati. Un confronto onesto.",
+    "featureColumn": "Funzionalità",
+    "footnote": "Scenari tipici — il tuo setup può variare. ProGo sostituisce le pezze con una piattaforma live.",
+    "columns": { "whatsapp": "WhatsApp", "excel": "Excel / Sheets", "portals": "Portali clienti", "progo": "ProGo" },
+    "values": { "yes": "Sì", "no": "No", "partial": "Limitato" },
+    "rows": {
+      "liveMap": { "label": "Mappa GPS live per flotta e carichi", "whatsapp": "no", "excel": "no", "portals": "partial", "progo": "yes" },
+      "sharedView": { "label": "Visibilità condivisa tra aziende", "whatsapp": "no", "excel": "no", "portals": "no", "progo": "yes" },
+      "documents": { "label": "Documenti collegati a ogni job", "whatsapp": "partial", "excel": "no", "portals": "partial", "progo": "yes" },
+      "statuses": { "label": "Stati carico strutturati", "whatsapp": "no", "excel": "partial", "portals": "partial", "progo": "yes" },
+      "onePlatform": { "label": "Vettori, autisti e clienti insieme", "whatsapp": "no", "excel": "no", "portals": "no", "progo": "yes" },
+      "accounting": { "label": "Contabilità collegata alle operazioni", "whatsapp": "no", "excel": "partial", "portals": "no", "progo": "yes" },
+      "driverWorkflow": { "label": "Workflow mobile dedicato agli autisti", "whatsapp": "partial", "excel": "no", "portals": "partial", "progo": "yes" }
+    }
+  },
+  "stickyCta": {
+    "ariaLabel": "Offerta prova gratuita",
+    "badge": "30 giorni FREE",
+    "hint": "Piattaforma completa · Senza impegno",
+    "cta": "Inizia il mese gratuito"
+  },
   "solution": {
     "label": "La soluzione",
     "title": "ProGo riunisce l'operazione in un unico workspace condiviso.",
@@ -264,7 +295,9 @@
         "invalid_name": "Inserisci il nome completo.",
         "invalid_email": "Inserisci un indirizzo email valido.",
         "invalid_company": "Il nome dell'azienda è troppo lungo.",
-        "privacy_required": "Accetta il consenso privacy per inviare il messaggio."
+        "privacy_required": "Accetta il consenso privacy per inviare il messaggio.",
+        "invalid_role": "Seleziona un ruolo valido dall'elenco.",
+        "spam": "Impossibile inviare il messaggio. Riprova o scrivici via email."
       }
     }
   },

@@ -1,12 +1,13 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { localeNames, locales, type Locale } from "@/i18n/routing";
 
 export function LanguageSwitcher() {
   const locale = useLocale() as Locale;
+  const tc = useTranslations("common");
   const router = useRouter();
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -33,7 +34,7 @@ export function LanguageSwitcher() {
         type="button"
         onClick={() => setOpen(!open)}
         className="flex h-10 items-center gap-2 rounded-lg border border-white/10 bg-navy-900/60 px-3 text-sm text-text-secondary transition-colors hover:border-cyan-glow/30 hover:text-cyan-soft"
-        aria-label="Language"
+        aria-label={tc("language")}
         aria-expanded={open}
       >
         <svg viewBox="0 0 20 20" className="h-4 w-4 text-cyan-soft" aria-hidden="true">

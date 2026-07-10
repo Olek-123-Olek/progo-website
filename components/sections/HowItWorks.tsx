@@ -6,7 +6,7 @@ export function HowItWorks() {
   const t = useTranslations("howItWorks");
 
   return (
-    <section id="how-it-works" className="relative py-24 md:py-32">
+    <section id="how-it-works" className="relative py-24 md:py-32 scroll-mt-24">
       <div className="absolute inset-0 grid-overlay opacity-30" />
       <div className="relative mx-auto max-w-7xl px-4 md:px-8">
         <SectionHeader label={t("label")} title={t("title")} description={t("description")} />

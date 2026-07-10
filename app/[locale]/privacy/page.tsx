@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { Button } from "@/components/ui/Button";
+import { localeAlternates } from "@/lib/metadata";
 import { type Locale } from "@/i18n/routing";
 
 const SECTION_KEYS = [
@@ -29,6 +29,7 @@ export async function generateMetadata({
     title: t("title"),
     description: t("description"),
     robots: { index: true, follow: true },
+    alternates: localeAlternates(locale, "privacy"),
   };
 }
 
@@ -72,9 +73,12 @@ export default async function PrivacyPage({
           </div>
 
           <div className="mt-12 flex flex-wrap gap-3">
-            <Button href="/#contact" size="sm">
+            <Link
+              href={{ pathname: "/", hash: "contact" }}
+              className="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm rounded-lg bg-gradient-to-r from-cyan-dim to-cyan-soft text-navy-950 font-semibold hover:from-cyan-soft hover:to-cyan-glow transition-all duration-300"
+            >
               {tc("contact")}
-            </Button>
+            </Link>
             <Link href="/" className="inline-flex items-center text-sm text-text-secondary hover:text-cyan-soft">
               ← {t("backHome")}
             </Link>

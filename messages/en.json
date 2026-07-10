@@ -26,6 +26,13 @@
     "billed": "billed {period}",
     "fullFunctionality": "full ProGo functionality"
   },
+  "cookie": {
+    "title": "Cookie preferences",
+    "message": "We use privacy-friendly analytics to understand how visitors use our site. You can accept analytics or continue with essential cookies only.",
+    "accept": "Accept analytics",
+    "essential": "Essential only",
+    "privacy": "Privacy Policy"
+  },
   "nav": {
     "problem": "Problem",
     "whyProgo": "Why ProGo",
@@ -195,6 +202,81 @@
       "Shared company visibility across partners",
       "Accounting connected to operations"
     ]
+  },
+  "comparison": {
+    "label": "Compare",
+    "title": "ProGo vs WhatsApp, Excel and customer portals",
+    "description": "Most logistics teams still patch together group chats, spreadsheets and separate client portals. Here's an honest side-by-side.",
+    "featureColumn": "Capability",
+    "footnote": "Based on typical workflows — your setup may vary. ProGo replaces the patchwork with one live platform.",
+    "columns": {
+      "whatsapp": "WhatsApp",
+      "excel": "Excel / Sheets",
+      "portals": "Client portals",
+      "progo": "ProGo"
+    },
+    "values": {
+      "yes": "Yes",
+      "no": "No",
+      "partial": "Limited"
+    },
+    "rows": {
+      "liveMap": {
+        "label": "Live GPS map for fleet & loads",
+        "whatsapp": "no",
+        "excel": "no",
+        "portals": "partial",
+        "progo": "yes"
+      },
+      "sharedView": {
+        "label": "Shared visibility across companies",
+        "whatsapp": "no",
+        "excel": "no",
+        "portals": "no",
+        "progo": "yes"
+      },
+      "documents": {
+        "label": "Documents attached to each job",
+        "whatsapp": "partial",
+        "excel": "no",
+        "portals": "partial",
+        "progo": "yes"
+      },
+      "statuses": {
+        "label": "Structured load statuses",
+        "whatsapp": "no",
+        "excel": "partial",
+        "portals": "partial",
+        "progo": "yes"
+      },
+      "onePlatform": {
+        "label": "Carriers, drivers & clients together",
+        "whatsapp": "no",
+        "excel": "no",
+        "portals": "no",
+        "progo": "yes"
+      },
+      "accounting": {
+        "label": "Accounting linked to operations",
+        "whatsapp": "no",
+        "excel": "partial",
+        "portals": "no",
+        "progo": "yes"
+      },
+      "driverWorkflow": {
+        "label": "Dedicated driver mobile workflow",
+        "whatsapp": "partial",
+        "excel": "no",
+        "portals": "partial",
+        "progo": "yes"
+      }
+    }
+  },
+  "stickyCta": {
+    "ariaLabel": "Free trial offer",
+    "badge": "30 days FREE",
+    "hint": "Full platform · No commitment",
+    "cta": "Start free month"
   },
   "solution": {
     "label": "The solution",
@@ -393,7 +475,9 @@
         "invalid_name": "Please enter your full name.",
         "invalid_email": "Please enter a valid email address.",
         "invalid_company": "Company name is too long.",
-        "privacy_required": "Please accept the privacy consent to send your message."
+        "privacy_required": "Please accept the privacy consent to send your message.",
+        "invalid_role": "Please select a valid role from the list.",
+        "spam": "Your message could not be sent. Please try again or email us directly."
       }
     }
   },

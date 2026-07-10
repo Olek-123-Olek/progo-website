@@ -26,6 +26,13 @@
     "billed": "оплата {period}",
     "fullFunctionality": "повний функціонал ProGo"
   },
+  "cookie": {
+    "title": "Налаштування cookies",
+    "message": "Ми використовуємо аналітику для розуміння трафіку на сайті. Ви можете прийняти аналітику або лише необхідні cookies.",
+    "accept": "Прийняти аналітику",
+    "essential": "Лише необхідні",
+    "privacy": "Політика конфіденційності"
+  },
   "nav": {
     "problem": "Проблема",
     "whyProgo": "Чому ProGo",
@@ -164,6 +171,30 @@
     "traditional": ["Багато порталів — у кожного клієнта своя система", "Хаос у WhatsApp — оновлення губляться в чатах", "Відсутні CMR — документи не прив'язані до замовлень", "Запізнілі статуси — ніхто не бачить live-правду", "Штрафи та затримки оплат", "Немає спільної видимості між компаніями"],
     "progo": ["Одна спільна карта для всієї операції", "Один live-план, підключений до реальних даних", "Один workflow водія — GPS, статус, документи", "Документи прив'язані до кожного замовлення", "Спільна видимість між партнерами", "Облік підключений до операцій"]
   },
+  "comparison": {
+    "label": "Порівняння",
+    "title": "ProGo vs WhatsApp, Excel і портали замовників",
+    "description": "Більшість логістичних команд досі збирають групові чати, таблиці та окремі портали. Чесне порівняння.",
+    "featureColumn": "Можливість",
+    "footnote": "Типові сценарії — ваше середовище може відрізнятися. ProGo замінює латки однією live-платформою.",
+    "columns": { "whatsapp": "WhatsApp", "excel": "Excel / Sheets", "portals": "Портали клієнтів", "progo": "ProGo" },
+    "values": { "yes": "Так", "no": "Ні", "partial": "Обмежено" },
+    "rows": {
+      "liveMap": { "label": "Live GPS-карта автопарку та вантажів", "whatsapp": "no", "excel": "no", "portals": "partial", "progo": "yes" },
+      "sharedView": { "label": "Спільна видимість між компаніями", "whatsapp": "no", "excel": "no", "portals": "no", "progo": "yes" },
+      "documents": { "label": "Документи прив'язані до замовлення", "whatsapp": "partial", "excel": "no", "portals": "partial", "progo": "yes" },
+      "statuses": { "label": "Структуровані статуси вантажів", "whatsapp": "no", "excel": "partial", "portals": "partial", "progo": "yes" },
+      "onePlatform": { "label": "Перевізники, водії та клієнти разом", "whatsapp": "no", "excel": "no", "portals": "no", "progo": "yes" },
+      "accounting": { "label": "Облік, пов'язаний з операціями", "whatsapp": "no", "excel": "partial", "portals": "no", "progo": "yes" },
+      "driverWorkflow": { "label": "Окремий мобільний workflow для водіїв", "whatsapp": "partial", "excel": "no", "portals": "partial", "progo": "yes" }
+    }
+  },
+  "stickyCta": {
+    "ariaLabel": "Пропозиція безкоштовного trial",
+    "badge": "30 днів FREE",
+    "hint": "Повний доступ · Без зобов'язань",
+    "cta": "Почати безкоштовний місяць"
+  },
   "solution": {
     "label": "Рішення",
     "title": "ProGo об'єднує операцію в одному спільному просторі.",
@@ -270,7 +301,9 @@
         "invalid_name": "Вкажіть повне ім'я.",
         "invalid_email": "Вкажіть коректну email-адресу.",
         "invalid_company": "Назва компанії занадто довга.",
-        "privacy_required": "Поставте галочку згоди, щоб надіслати повідомлення."
+        "privacy_required": "Поставте галочку згоди, щоб надіслати повідомлення.",
+        "invalid_role": "Оберіть коректну роль зі списку.",
+        "spam": "Повідомлення не надіслано. Спробуйте ще раз або напишіть на email."
       }
     }
   },

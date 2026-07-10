@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/next";
+import { ConsentAndAnalytics } from "@/components/analytics/ConsentAndAnalytics";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Geist, Geist_Mono } from "next/font/google";
 import { routing, type Locale } from "@/i18n/routing";
+import { localeAlternates } from "@/lib/metadata";
 import { SITE_URL } from "@/lib/site";
 import "../globals.css";
 
@@ -42,6 +43,7 @@ export async function generateMetadata({
       siteName: "ProGo",
       url: `${SITE_URL}/${locale}`,
     },
+    alternates: localeAlternates(locale),
     twitter: {
       card: "summary_large_image",
       title: t("title"),
@@ -75,8 +77,8 @@ export default async function LocaleLayout({
       >
         <NextIntlClientProvider messages={messages}>
           {children}
+          <ConsentAndAnalytics />
         </NextIntlClientProvider>
-        <Analytics />
       </body>
     </html>
   );

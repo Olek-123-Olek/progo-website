@@ -19,6 +19,8 @@ const ERROR_KEYS = [
   "invalid_email",
   "invalid_company",
   "privacy_required",
+  "invalid_role",
+  "spam",
   "rate_limit",
   "send_failed",
 ] as const;

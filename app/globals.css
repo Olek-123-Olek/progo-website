@@ -976,6 +976,84 @@ body {
   border-color: rgba(0, 229, 255, 0.25);
 }
 
+/* Cookie consent */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  padding: 1rem;
+  pointer-events: none;
+}
+
+.cookie-banner-inner {
+  pointer-events: auto;
+  margin: 0 auto;
+  max-width: 48rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(10, 18, 32, 0.95);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.35);
+}
+
+@media (min-width: 640px) {
+  .cookie-banner-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.cookie-banner-text {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #94a3b8;
+}
+
+.cookie-banner-actions {
+  display: flex;
+  flex-shrink: 0;
+  gap: 0.5rem;
+}
+
+.cookie-banner-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.cookie-banner-btn-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: transparent;
+  color: #cbd5e1;
+}
+
+.cookie-banner-btn-secondary:hover {
+  border-color: rgba(0, 229, 255, 0.3);
+  color: #e2e8f0;
+}
+
+.cookie-banner-btn-primary {
+  border: none;
+  background: linear-gradient(to right, #00b8d4, #00e5ff);
+  color: #0a1220;
+  font-weight: 600;
+}
+
+.cookie-banner-btn-primary:hover {
+  filter: brightness(1.08);
+}
+
 /* FAQ accordion */
 .faq-trigger {
   display: flex;
@@ -1011,6 +1089,142 @@ body {
 
 .faq-panel-open > p {
   padding: 0 1.25rem 1.125rem;
+}
+
+/* Comparison table */
+.comparison-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.comparison-table {
+  width: 100%;
+  min-width: 36rem;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.comparison-th,
+.comparison-td {
+  padding: 0.875rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.comparison-th-feature,
+.comparison-td-feature {
+  text-align: left;
+  font-weight: 500;
+  color: #e2e8f0;
+  min-width: 11rem;
+}
+
+.comparison-th {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.comparison-th-progo {
+  color: #00e5ff;
+  background: rgba(0, 229, 255, 0.06);
+}
+
+.comparison-td-progo {
+  background: rgba(0, 229, 255, 0.04);
+}
+
+.comparison-td-feature {
+  background: rgba(255, 255, 255, 0.01);
+}
+
+.comparison-cell {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  font-weight: 600;
+}
+
+.comparison-cell-yes {
+  color: #00e5ff;
+}
+
+.comparison-cell-partial {
+  color: #fbbf24;
+}
+
+.comparison-cell-no {
+  color: #64748b;
+}
+
+.comparison-table tbody tr:last-child .comparison-td,
+.comparison-table tbody tr:last-child .comparison-td-feature {
+  border-bottom: none;
+}
+
+/* Sticky mobile CTA */
+.sticky-mobile-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 55;
+  padding: 0.75rem 1rem;
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+  background: linear-gradient(to top, rgba(10, 18, 32, 0.98) 70%, transparent);
+  backdrop-filter: blur(8px);
+}
+
+@media (min-width: 1024px) {
+  .sticky-mobile-cta {
+    display: none;
+  }
+}
+
+.sticky-mobile-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  max-width: 32rem;
+  margin: 0 auto;
+  padding: 0.625rem 0.875rem;
+  border-radius: 0.875rem;
+  border: 1px solid rgba(0, 229, 255, 0.25);
+  background: rgba(15, 25, 45, 0.95);
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.35), 0 0 20px rgba(0, 229, 255, 0.08);
+}
+
+.sticky-mobile-cta-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  min-width: 0;
+}
+
+.sticky-mobile-cta-badge {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #00e5ff;
+}
+
+.sticky-mobile-cta-sub {
+  font-size: 0.6875rem;
+  color: #94a3b8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sticky-mobile-cta-btn {
+  padding-left: 0.875rem !important;
+  padding-right: 0.875rem !important;
 }
 
 /* Scrollbar */

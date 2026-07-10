@@ -16,7 +16,7 @@ export function Pricing() {
   const activeBilling = BILLING_OPTIONS.find((b) => b.id === billing)!;
 
   return (
-    <section id="pricing" className="relative py-24 md:py-32">
+    <section id="pricing" className="relative py-24 md:py-32 scroll-mt-24">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/[0.03] to-cyan-glow/[0.02]" />
       <div className="relative mx-auto max-w-7xl px-4 md:px-8">
         <SectionHeader label={t("label")} title={t("title")} description={t("description")} />
