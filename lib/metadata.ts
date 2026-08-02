@@ -12,9 +12,11 @@ export function localeAlternates(locale: string, path = "") {
   languages["x-default"] = `${SITE_URL}/en${suffix}`;
 
   return {
-    canonical: path === "privacy" || path === "privacy-choices"
-      ? `${SITE_URL}/${path}`
-      : `${SITE_URL}/${locale}${suffix}`,
+    // Self-referential per-locale canonical keeps each localized page indexable
+    // and consistent with its hreflang cluster. The bare /privacy and
+    // /privacy-choices URLs used for App Store are 307 redirects, so they must
+    // not be advertised as canonical here.
+    canonical: `${SITE_URL}/${locale}${suffix}`,
     languages,
   };
 }
