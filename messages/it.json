@@ -322,22 +322,5 @@
       "dataPrivacy": { "q": "Come proteggete i miei dati?", "a": "Trattiamo i dati solo per fornire il servizio e rispondere alle richieste. Dettagli nella nostra Informativa sulla privacy." },
       "howToStart": { "q": "Come iniziare?", "a": "Aprite la piattaforma o contattateci tramite il modulo. Rispondiamo di solito entro 24 ore." }
     }
-  },
-  "privacy": {
-    "label": "Legale",
-    "title": "Informativa sulla privacy",
-    "updated": "Ultimo aggiornamento: luglio 2026",
-    "backHome": "Torna alla home",
-    "meta": { "title": "Informativa sulla privacy — ProGo", "description": "Come ProGo raccoglie, utilizza e protegge i dati personali su progo.one." },
-    "sections": {
-      "intro": { "title": "Panoramica", "paragraphs": ["ProGo gestisce progo.one e la piattaforma ProGo. Questa informativa spiega quali dati raccogliamo e i vostri diritti secondo il GDPR.", "Usando il sito, accettate questa informativa."] },
-      "dataCollected": { "title": "Dati raccolti", "paragraphs": ["Modulo contatti: nome, email, azienda, ruolo, messaggio, lingua del browser.", "Analytics: traffico anonimo tramite Vercel Analytics.", "Account piattaforma: secondo il contratto di servizio."] },
-      "howWeUse": { "title": "Uso dei dati", "paragraphs": ["Per rispondere alle richieste e supporto.", "Per email relative alla vostra richiesta.", "Per migliorare il sito.", "Non vendiamo dati personali."] },
-      "contactForm": { "title": "Modulo ed email", "paragraphs": ["I messaggi vanno a admin@progo.one tramite Resend.", "La vostra email è Reply-To per risposte dirette."] },
-      "cookies": { "title": "Cookie", "paragraphs": ["Vercel Analytics per misurare il traffico.", "Session storage per il contatore visualizzazioni."] },
-      "retention": { "title": "Conservazione", "paragraphs": ["Richieste conservate fino a 24 mesi salvo obblighi di legge.", "Cancellazione su richiesta."] },
-      "rights": { "title": "I vostri diritti", "paragraphs": ["Accesso, rettifica, cancellazione, limitazione — secondo il GDPR.", "Contatto: admin@progo.one. Reclamo all'autorità di protezione dati."] },
-      "contact": { "title": "Contatto", "paragraphs": ["Privacy: admin@progo.one", "Sito: progo.one"] }
-    }
   }
 }

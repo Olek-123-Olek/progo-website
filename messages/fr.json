@@ -322,22 +322,5 @@
       "dataPrivacy": { "q": "Comment protégez-vous mes données ?", "a": "Nous traitons les données uniquement pour fournir le service et répondre aux demandes. Voir notre Politique de confidentialité." },
       "howToStart": { "q": "Comment démarrer ?", "a": "Ouvrez la plateforme ou contactez-nous via le formulaire. Nous répondons généralement sous 24 heures." }
     }
-  },
-  "privacy": {
-    "label": "Mentions légales",
-    "title": "Politique de confidentialité",
-    "updated": "Dernière mise à jour : juillet 2026",
-    "backHome": "Retour à l'accueil",
-    "meta": { "title": "Politique de confidentialité — ProGo", "description": "Comment ProGo collecte, utilise et protège les données personnelles sur progo.one." },
-    "sections": {
-      "intro": { "title": "Aperçu", "paragraphs": ["ProGo exploite progo.one et la plateforme ProGo. Cette politique explique quelles données nous collectons et vos droits au titre du RGPD.", "En utilisant le site, vous acceptez cette politique."] },
-      "dataCollected": { "title": "Données collectées", "paragraphs": ["Formulaire : nom, e-mail, entreprise, rôle, message, langue du navigateur.", "Analytics : trafic anonymisé via Vercel Analytics.", "Comptes plateforme : selon votre contrat de service."] },
-      "howWeUse": { "title": "Utilisation des données", "paragraphs": ["Pour répondre aux demandes et assurer le support.", "Pour les e-mails liés à votre demande.", "Pour améliorer le site.", "Nous ne vendons pas vos données personnelles."] },
-      "contactForm": { "title": "Formulaire & e-mail", "paragraphs": ["Les messages sont envoyés à admin@progo.one via Resend.", "Votre e-mail sert de Reply-To pour une réponse directe."] },
-      "cookies": { "title": "Cookies", "paragraphs": ["Vercel Analytics pour mesurer le trafic.", "Session storage pour le compteur de vues."] },
-      "retention": { "title": "Conservation", "paragraphs": ["Demandes conservées jusqu'à 24 mois sauf obligation légale contraire.", "Suppression possible sur demande."] },
-      "rights": { "title": "Vos droits", "paragraphs": ["Accès, rectification, suppression, limitation — conformément au RGPD.", "Contact : admin@progo.one. Réclamation auprès d'une autorité de protection des données."] },
-      "contact": { "title": "Contact", "paragraphs": ["Questions confidentialité : admin@progo.one", "Site : progo.one"] }
-    }
   }
 }

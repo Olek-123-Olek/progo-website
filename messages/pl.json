@@ -322,22 +322,5 @@
       "dataPrivacy": { "q": "Jak chronicie moje dane?", "a": "Przetwarzamy dane tylko w celu świadczenia usługi i odpowiedzi na zapytania. Szczegóły w Polityce prywatności." },
       "howToStart": { "q": "Jak zacząć?", "a": "Otwórz platformę i rozpocznij darmowy miesiąc lub napisz przez formularz kontaktowy. Odpowiadamy zwykle w 24 godziny." }
     }
-  },
-  "privacy": {
-    "label": "Prawne",
-    "title": "Polityka prywatności",
-    "updated": "Ostatnia aktualizacja: lipiec 2026",
-    "backHome": "Wróć na stronę główną",
-    "meta": { "title": "Polityka prywatności — ProGo", "description": "Jak ProGo zbiera, wykorzystuje i chroni dane osobowe na progo.one i platformie ProGo." },
-    "sections": {
-      "intro": { "title": "Wprowadzenie", "paragraphs": ["ProGo (\"my\", \"nas\") prowadzi progo.one i platformę logistyczną ProGo. Niniejsza polityka wyjaśnia, jakie dane zbieramy i jakie masz prawa, w tym na mocy RODO.", "Korzystając ze strony lub kontaktując się z nami, akceptujesz tę politykę."] },
-      "dataCollected": { "title": "Jakie dane zbieramy", "paragraphs": ["Formularz kontaktowy: imię, e-mail, firma (opcjonalnie), rola (opcjonalnie), treść wiadomości i język przeglądarki.", "Analityka strony: anonimowe dane o ruchu przez Vercel Analytics.", "Konta platformy: regulowane umową o świadczenie usług."] },
-      "howWeUse": { "title": "Jak wykorzystujemy dane", "paragraphs": ["Aby odpowiadać na zapytania i udzielać wsparcia.", "Aby wysyłać e-maile związane z Twoim zapytaniem.", "Aby ulepszać stronę i rozumieć ruch zbiorczy.", "Nie sprzedajemy danych osobowych stronom trzecim."] },
-      "contactForm": { "title": "Formularz i e-mail", "paragraphs": ["Po wysłaniu formularza wiadomość trafia do admin@progo.one przez bezpieczną usługę Resend.", "Twój e-mail jest ustawiany jako Reply-To, abyśmy mogli odpowiedzieć bezpośrednio."] },
-      "cookies": { "title": "Cookies i analityka", "paragraphs": ["Używamy Vercel Analytics do pomiaru ruchu — może to obejmować anonimowe cookies.", "Formularz używa session storage, aby nie liczyć powtórnych wyświetleń w liczniku na stronie."] },
-      "retention": { "title": "Przechowywanie", "paragraphs": ["Zapytania kontaktowe przechowujemy tak długo, jak to konieczne do obsługi i dokumentacji — zwykle do 24 miesięcy.", "Możesz poprosić o usunięcie danych w każdej chwili."] },
-      "rights": { "title": "Twoje prawa", "paragraphs": ["Masz prawo dostępu, sprostowania, usunięcia, ograniczenia przetwarzania i sprzeciwu — zgodnie z RODO.", "Kontakt: admin@progo.one. Możesz też złożyć skargę do organu ochrony danych."] },
-      "contact": { "title": "Kontakt", "paragraphs": ["Pytania o prywatność: admin@progo.one", "Strona: progo.one"] }
-    }
   }
 }
