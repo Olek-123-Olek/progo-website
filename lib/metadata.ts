@@ -12,7 +12,9 @@ export function localeAlternates(locale: string, path = "") {
   languages["x-default"] = `${SITE_URL}/en${suffix}`;
 
   return {
-    canonical: `${SITE_URL}/${locale}${suffix}`,
+    canonical: path === "privacy" || path === "privacy-choices"
+      ? `${SITE_URL}/${path}`
+      : `${SITE_URL}/${locale}${suffix}`,
     languages,
   };
 }

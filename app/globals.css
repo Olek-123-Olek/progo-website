@@ -1227,6 +1227,134 @@ body {
   padding-right: 0.875rem !important;
 }
 
+/* Privacy / legal documents */
+.privacy-page {
+  background:
+    radial-gradient(ellipse 80% 50% at 10% 0%, rgba(0, 229, 255, 0.06), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 90% 10%, rgba(59, 130, 246, 0.05), transparent 50%);
+}
+
+.privacy-layout {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .privacy-layout {
+    grid-template-columns: 16rem minmax(0, 42rem);
+    gap: 3rem;
+    align-items: start;
+    justify-content: center;
+  }
+}
+
+.privacy-toc {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .privacy-toc {
+    display: block;
+    position: sticky;
+    top: 7rem;
+    padding: 1.25rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(10, 18, 32, 0.65);
+  }
+}
+
+.privacy-toc-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #67e8f9;
+  margin-bottom: 0.75rem;
+}
+
+.privacy-toc ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.privacy-toc a {
+  display: block;
+  font-size: 0.8125rem;
+  line-height: 1.35;
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.privacy-toc a:hover {
+  color: #e2e8f0;
+}
+
+.privacy-content {
+  min-width: 0;
+}
+
+.privacy-card {
+  padding: 1.25rem 1.35rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(15, 25, 45, 0.45);
+}
+
+.privacy-bullets {
+  margin: 0.25rem 0 0;
+  padding-left: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.privacy-bullets li::marker {
+  color: #22d3ee;
+}
+
+.privacy-cta-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0a1220;
+  background: linear-gradient(to right, #00b8d4, #00e5ff);
+  text-decoration: none;
+  transition: filter 0.2s ease;
+}
+
+.privacy-cta-primary:hover {
+  filter: brightness(1.06);
+}
+
+.privacy-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  color: #94a3b8;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.privacy-cta-secondary:hover {
+  color: #67e8f9;
+  border-color: rgba(0, 229, 255, 0.35);
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;

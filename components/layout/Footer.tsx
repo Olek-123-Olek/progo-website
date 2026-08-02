@@ -96,6 +96,9 @@ export function Footer() {
             <Link href="/privacy" className="hover:text-cyan-soft transition-colors">
               {tc("privacyPolicy")}
             </Link>
+            <Link href="/privacy-choices" className="hover:text-cyan-soft transition-colors">
+              {tc("privacyChoices")}
+            </Link>
           </div>
           <p>{tc("tagline")}</p>
         </div>
