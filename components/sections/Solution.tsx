@@ -13,6 +13,24 @@ const iconMap = {
   accounting: "accounting",
 } as const;
 
+const accentMap = {
+  map: "cyan",
+  plan: "green",
+  driver: "red",
+  docs: "amber",
+  messages: "cyan",
+  accounting: "green",
+} as const;
+
+const iconTone = {
+  map: "bg-cyan-glow/10 text-cyan-glow glow-cyan",
+  plan: "bg-green-accent/10 text-green-glow glow-green",
+  driver: "bg-red-accent/10 text-red-accent glow-red",
+  docs: "bg-amber-accent/10 text-amber-glow glow-amber",
+  messages: "bg-cyan-glow/10 text-cyan-glow glow-cyan",
+  accounting: "bg-green-accent/10 text-green-glow glow-green",
+} as const;
+
 export function Solution() {
   const t = useTranslations("solution");
 
@@ -26,12 +44,12 @@ export function Solution() {
           {SOLUTION_KEYS.map((key, i) => (
             <GlassCard
               key={key}
-              accent="cyan"
+              accent={accentMap[key]}
               className="group animate-fade-in-up"
               style={{ animationDelay: `${(i + 1) * 100}ms` }}
             >
               <div className="mb-4 flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-glow/10 text-cyan-glow glow-cyan transition-transform group-hover:scale-110">
+                <div className={`flex h-12 w-12 items-center justify-center rounded-xl transition-transform group-hover:scale-110 ${iconTone[key]}`}>
                   <Icon name={iconMap[key]} size={24} />
                 </div>
                 <Icon name="arrow" size={20} className="arrow-accent opacity-60" />

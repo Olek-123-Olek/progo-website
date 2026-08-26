@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ConsentAndAnalytics } from "@/components/analytics/ConsentAndAnalytics";
+import { AtmosphereBackground } from "@/components/ui/AtmosphereBackground";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -76,8 +77,11 @@ export default async function LocaleLayout({
         suppressHydrationWarning
       >
         <NextIntlClientProvider messages={messages}>
-          {children}
-          <ConsentAndAnalytics />
+          <AtmosphereBackground />
+          <div className="relative z-10">
+            {children}
+            <ConsentAndAnalytics />
+          </div>
         </NextIntlClientProvider>
       </body>
     </html>

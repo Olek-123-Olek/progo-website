@@ -39,7 +39,11 @@ export function Features() {
                 className={`mb-3 flex h-11 w-11 items-center justify-center rounded-xl ${
                   feature.accent === "red"
                     ? "bg-red-accent/10 text-red-accent"
-                    : "bg-cyan-glow/10 text-cyan-glow"
+                    : feature.accent === "green"
+                      ? "bg-green-accent/10 text-green-glow"
+                      : feature.accent === "amber"
+                        ? "bg-amber-accent/10 text-amber-glow"
+                        : "bg-cyan-glow/10 text-cyan-glow"
                 }`}
               >
                 <Icon name={iconMap[feature.key]} size={22} />

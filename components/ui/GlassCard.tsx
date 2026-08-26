@@ -4,7 +4,7 @@ interface GlassCardProps {
   children: ReactNode;
   className?: string;
   highlight?: boolean;
-  accent?: "cyan" | "red" | "none";
+  accent?: "cyan" | "red" | "green" | "amber" | "none";
   style?: CSSProperties;
 }
 
@@ -20,7 +20,11 @@ export function GlassCard({
       ? "border-cyan-glow/20 hover:border-cyan-glow/35"
       : accent === "red"
         ? "border-red-accent/20 hover:border-red-accent/35"
-        : "";
+        : accent === "green"
+          ? "border-green-accent/25 hover:border-green-glow/40"
+          : accent === "amber"
+            ? "border-amber-accent/25 hover:border-amber-glow/40"
+            : "";
 
   return (
     <div

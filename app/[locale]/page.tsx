@@ -17,6 +17,7 @@ import { FinalCta } from "@/components/sections/FinalCta";
 import { SocialLinks } from "@/components/sections/SocialLinks";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { StickyMobileCta } from "@/components/ui/StickyMobileCta";
+import { RevealObserver } from "@/components/ui/RevealObserver";
 import { type Locale } from "@/i18n/routing";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
@@ -97,6 +98,7 @@ export default async function HomePage({
         <SocialLinks />
       </main>
       <StickyMobileCta />
+      <RevealObserver />
       <Footer />
     </>
   );

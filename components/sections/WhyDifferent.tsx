@@ -30,7 +30,7 @@ export function WhyDifferent() {
             </ul>
           </GlassCard>
 
-          <GlassCard accent="cyan" className="animate-fade-in-up delay-200">
+          <GlassCard accent="green" className="animate-fade-in-up delay-200">
             <div className="mb-6 flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-cyan-glow/10 text-cyan-glow glow-cyan">
                 <Icon name="map" size={20} />

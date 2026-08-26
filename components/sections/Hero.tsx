@@ -13,11 +13,12 @@ export function Hero() {
   return (
     <section className="relative min-h-0 flex items-center overflow-hidden pt-10 pb-20 md:pt-14">
       <div className="absolute inset-0 bg-mesh bg-mesh-animated" />
-      <div className="absolute inset-0 grid-overlay map-grid-animate" />
-      <div className="absolute inset-0 hero-route-glow opacity-40" />
+      <div className="absolute inset-0 grid-overlay map-grid-animate opacity-70" />
+      <div className="absolute inset-0 hero-route-glow opacity-30" />
 
       <div className="absolute top-1/4 left-1/4 h-72 w-72 rounded-full bg-cyan-glow/5 blur-3xl animate-float" />
-      <div className="absolute bottom-1/4 right-1/4 h-56 w-56 rounded-full bg-purple-500/5 blur-3xl animate-float delay-300" />
+      <div className="absolute bottom-1/4 right-1/4 h-56 w-56 rounded-full bg-red-accent/5 blur-3xl animate-float delay-300" />
+      <div className="absolute top-1/3 right-1/3 h-40 w-40 rounded-full bg-green-accent/5 blur-3xl animate-float delay-500" />
 
       <div className="relative mx-auto max-w-7xl px-4 md:px-8 w-full">
         <div className="grid gap-10 lg:gap-6 items-center lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] xl:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)]">
@@ -62,7 +63,7 @@ export function Hero() {
             <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2 animate-fade-in-up delay-500">
               {TRUST_KEYS.map((key) => (
                 <li key={key} className="flex items-center gap-1.5 text-sm text-text-secondary">
-                  <Icon name="check" size={14} className="text-cyan-glow shrink-0" />
+                  <Icon name="check" size={14} className="text-green-glow shrink-0 drop-shadow-[0_0_6px_rgba(74,222,128,0.5)]" />
                   {t(key)}
                 </li>
               ))}

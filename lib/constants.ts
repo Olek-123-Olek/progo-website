@@ -38,14 +38,14 @@ export const SOLUTION_KEYS = [
 
 export const FEATURE_KEYS = [
   { key: "map", accent: "cyan", preview: "map" },
-  { key: "plan", accent: "cyan", preview: "plan" },
+  { key: "plan", accent: "green", preview: "plan" },
   { key: "driver", accent: "red", preview: "driver" },
-  { key: "docs", accent: "cyan", preview: "docs" },
+  { key: "docs", accent: "amber", preview: "docs" },
   { key: "messages", accent: "cyan", preview: "messages" },
-  { key: "accounting", accent: "red", preview: "accounting" },
+  { key: "accounting", accent: "green", preview: "accounting" },
   { key: "sos", accent: "red", preview: "sos" },
   { key: "collab", accent: "cyan", preview: "collab" },
-  { key: "fleet", accent: "cyan", preview: "fleet" },
+  { key: "fleet", accent: "amber", preview: "fleet" },
   { key: "monitor", accent: "red", preview: "monitor" },
 ] as const;
 
