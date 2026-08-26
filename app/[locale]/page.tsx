@@ -18,6 +18,7 @@ import { SocialLinks } from "@/components/sections/SocialLinks";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { StickyMobileCta } from "@/components/ui/StickyMobileCta";
 import { RevealObserver } from "@/components/ui/RevealObserver";
+import { AtmosphereBackground } from "@/components/ui/AtmosphereBackground";
 import { type Locale } from "@/i18n/routing";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
@@ -73,33 +74,36 @@ export default async function HomePage({
   return (
     <>
       <JsonLd data={[orgJsonLd, faqJsonLd]} />
-      <Header />
-      <main className="pb-20 lg:pb-0">
-        <TrialBanner />
-        <Hero />
-        <TrustStrip />
-        <div className="section-divider mx-auto max-w-7xl" />
-        <Problem />
-        <div className="section-divider mx-auto max-w-7xl" />
-        <WhyDifferent />
-        <div className="section-divider mx-auto max-w-7xl" />
-        <Comparison />
-        <div className="section-divider mx-auto max-w-7xl" />
-        <Solution />
-        <div className="section-divider mx-auto max-w-7xl" />
-        <HowItWorks />
-        <div className="section-divider mx-auto max-w-7xl" />
-        <Features />
-        <div className="section-divider mx-auto max-w-7xl" />
-        <Pricing />
-        <FinalCta />
-        <Faq />
-        <ContactSection />
-        <SocialLinks />
-      </main>
-      <StickyMobileCta />
-      <RevealObserver />
-      <Footer />
+      <AtmosphereBackground />
+      <div className="relative z-10">
+        <Header />
+        <main className="pb-20 lg:pb-0">
+          <TrialBanner />
+          <Hero />
+          <TrustStrip />
+          <div className="section-divider mx-auto max-w-7xl" />
+          <Problem />
+          <div className="section-divider mx-auto max-w-7xl" />
+          <WhyDifferent />
+          <div className="section-divider mx-auto max-w-7xl" />
+          <Comparison />
+          <div className="section-divider mx-auto max-w-7xl" />
+          <Solution />
+          <div className="section-divider mx-auto max-w-7xl" />
+          <HowItWorks />
+          <div className="section-divider mx-auto max-w-7xl" />
+          <Features />
+          <div className="section-divider mx-auto max-w-7xl" />
+          <Pricing />
+          <FinalCta />
+          <Faq />
+          <ContactSection />
+          <SocialLinks />
+        </main>
+        <StickyMobileCta />
+        <RevealObserver />
+        <Footer />
+      </div>
     </>
   );
 }
