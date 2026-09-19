@@ -19,19 +19,8 @@ import { JsonLd } from "@/components/ui/JsonLd";
 import { StickyMobileCta } from "@/components/ui/StickyMobileCta";
 import { RevealObserver } from "@/components/ui/RevealObserver";
 import { type Locale } from "@/i18n/routing";
+import { FAQ_KEYS } from "@/lib/constants";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
-
-const FAQ_KEYS = [
-  "whatIsProgo",
-  "whoFor",
-  "freeTrial",
-  "afterTrial",
-  "difference",
-  "driverApp",
-  "pricingModel",
-  "dataPrivacy",
-  "howToStart",
-] as const;
 
 export default async function HomePage({
   params,

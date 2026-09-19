@@ -64,6 +64,18 @@ export const BILLING_OPTIONS = [
 
 export const HOW_IT_WORKS_STEPS = [1, 2, 3, 4] as const;
 
+export const FAQ_KEYS = [
+  "whatIsProgo",
+  "whoFor",
+  "freeTrial",
+  "afterTrial",
+  "difference",
+  "driverApp",
+  "pricingModel",
+  "dataPrivacy",
+  "howToStart",
+] as const;
+
 export const TRUST_ITEM_COUNT = 5;
 
 export const COPYRIGHT_YEAR = 2026;
