@@ -220,18 +220,14 @@ export function ContactForm() {
       {status === "error" && (
         <div className="contact-form-error mt-4" role="alert">
           <p className="font-medium text-red-accent">{t("errorTitle")}</p>
-          {errorKey === "rate_limit" ? (
-            <p className="text-sm text-text-secondary mt-1">{t("rateLimit")}</p>
+          {errorKey && isErrorKey(errorKey) && errorKey !== "send_failed" && errorKey !== "rate_limit" ? (
+            <p className="text-sm text-text-secondary mt-1">{t(`errors.${errorKey}`)}</p>
           ) : (
             <p className="text-sm text-text-secondary mt-1">
-              {errorKey && isErrorKey(errorKey) && errorKey !== "send_failed"
-                ? t(`errors.${errorKey}`)
-                : `${t("errorBody")} `}
-              {(errorKey === "send_failed" || !errorKey) && (
-                <a href={`mailto:${CONTACT_EMAIL}`} className="text-cyan-soft hover:underline">
-                  {CONTACT_EMAIL}
-                </a>
-              )}
+              {errorKey === "rate_limit" ? t("rateLimit") : t("errorBody")}{" "}
+              <a href={`mailto:${CONTACT_EMAIL}`} className="text-cyan-soft hover:underline">
+                {CONTACT_EMAIL}
+              </a>
             </p>
           )}
         </div>
