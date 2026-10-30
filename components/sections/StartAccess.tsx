@@ -1,5 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 import { ContactForm } from "@/components/ui/ContactForm";
 import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
@@ -15,8 +17,10 @@ export function StartAccess() {
   const mailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(t("emailSubject"))}&body=${encodeURIComponent(t("emailBody"))}`;
 
   return (
-    <section className="relative py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-4 md:px-8">
+    <>
+      <Header />
+      <main className="relative pt-28 pb-24 md:pt-32">
+        <div className="mx-auto max-w-7xl px-4 md:px-8">
         <div className="mb-8">
           <Link
             href="/"
@@ -114,7 +118,9 @@ export function StartAccess() {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+        </div>
+      </main>
+      <Footer />
+    </>
   );
 }
