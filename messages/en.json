@@ -475,7 +475,7 @@
         "invalid_message": "Please write a bit more in your message (at least 5 characters).",
         "invalid_name": "Please enter your full name.",
         "invalid_email": "Please enter a valid email address.",
-        "invalid_company": "Company name is too long.",
+        "invalid_company": "Please enter a valid company name.",
         "privacy_required": "Please accept the privacy consent to send your message.",
         "invalid_role": "Please select a valid role from the list.",
         "spam": "Your message could not be sent. Please try again or email us directly."
@@ -603,5 +603,50 @@
         ]
       }
     }
+  },
+  "startAccess": {
+    "metaTitle": "Start free month — ProGo",
+    "metaDescription": "Request ProGo access for a free month. Tell us about your company and business type — we will create your account and reply by email.",
+    "badge": "Free month access",
+    "title": "Contact admin to start your free month",
+    "description": "Trial access is not an instant login. Write to admin@progo.one with your company details and what you do in logistics — transport, freight, production or forwarding. After review we set up registration and send access by email.",
+    "emailCta": "Please write to",
+    "emailHint": "Open your mail app with a ready subject, or fill in the form on the right — both go to the same inbox.",
+    "emailSubject": "ProGo trial access request",
+    "emailBody": "Hello ProGo team,\n\nI would like to request a free trial month.\n\nCompany name:\nCountry:\nBusiness type (transport / freight / production / forwarding / other):\nFleet size or monthly loads:\nNumber of users needed:\nContact person:\nPhone (optional):\n\nShort description of how we work today:\n\n",
+    "stepsTitle": "How to get access",
+    "steps": {
+      "1": {
+        "title": "Send company information",
+        "description": "Email us or use the form. Include company name, country and a short description of your operations."
+      },
+      "2": {
+        "title": "Say what your firm does",
+        "description": "Transport logistics / fleet, freight with loads to move, producer looking for vehicles, forwarding — or another logistics role."
+      },
+      "3": {
+        "title": "Receive access by email",
+        "description": "We review the request, prepare registration and reply with next steps for your free month."
+      }
+    },
+    "checklistTitle": "Please include in your message",
+    "checklist": {
+      "company": "Company name and country",
+      "activity": "Main activity (transport logistics, freight, production, forwarding…)",
+      "scale": "Fleet size, typical loads, or how many users you need",
+      "contact": "Contact person plus work email (and phone if useful)"
+    },
+    "formTitle": "Request access with the form",
+    "formNote": "Submissions are sent to admin@progo.one. We reply with access details after review.",
+    "existingUser": "Already have an account?",
+    "openPlatform": "Open the platform",
+    "backHome": "Back to homepage",
+    "companyPlaceholder": "Your company name",
+    "rolePlaceholder": "Select your business type",
+    "messagePlaceholder": "Describe your company: transport or freight logistics? Fleet size? Loads? What you want to try in ProGo…",
+    "messageHint": "Include business type and company details so we know who to register.",
+    "formSubmit": "Request free month",
+    "successTitle": "Request sent",
+    "successBody": "Thank you. We will review your details and email access instructions shortly."
   }
 }

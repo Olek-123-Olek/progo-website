@@ -1,6 +1,8 @@
 import { Resend } from "resend";
 import { CONTACT_EMAIL } from "@/lib/constants";
 
+export type ContactIntent = "contact" | "access";
+
 export type ContactPayload = {
   name: string;
   email: string;
@@ -9,6 +11,7 @@ export type ContactPayload = {
   message: string;
   locale?: string;
   privacyAccepted: boolean;
+  intent?: ContactIntent;
 };
 
 const ROLE_LABELS: Record<string, Record<string, string>> = {
@@ -42,6 +45,8 @@ export function validateContactPayload(body: unknown): { ok: true; data: Contact
   const role = typeof record.role === "string" ? record.role.trim() : "";
   const locale = typeof record.locale === "string" ? record.locale.trim() : "en";
   const privacyAccepted = record.privacyAccepted === true;
+  const intentRaw = typeof record.intent === "string" ? record.intent.trim() : "contact";
+  const intent: ContactIntent = intentRaw === "access" ? "access" : "contact";
 
   if (!name || name.length < 2 || name.length > 120) {
     return { ok: false, error: "invalid_name" };
@@ -59,7 +64,14 @@ export function validateContactPayload(body: unknown): { ok: true; data: Contact
     return { ok: false, error: "invalid_company" };
   }
 
-  const allowedRoles = ["carrier", "shipper", "producer", "forwarder", "other", ""];
+  if (intent === "access" && (!company || company.length < 2)) {
+    return { ok: false, error: "invalid_company" };
+  }
+
+  const allowedRoles =
+    intent === "access"
+      ? ["carrier", "shipper", "producer", "forwarder", "other"]
+      : ["carrier", "shipper", "producer", "forwarder", "other", ""];
   if (!allowedRoles.includes(role)) {
     return { ok: false, error: "invalid_role" };
   }
@@ -74,6 +86,7 @@ export function validateContactPayload(body: unknown): { ok: true; data: Contact
       message,
       locale,
       privacyAccepted,
+      intent,
     },
   };
 }
@@ -108,15 +121,21 @@ export async function sendContactEmail(data: ContactPayload): Promise<void> {
 
   const role = roleLabel(data.role, data.locale ?? "en");
   const company = data.company ?? "—";
+  const isAccess = data.intent === "access";
+  const subjectPrefix = isAccess ? "ProGo trial access" : "ProGo contact";
+  const heading = isAccess
+    ? "New ProGo trial access request"
+    : "New ProGo contact form submission";
 
   const { error } = await resend.emails.send({
     from,
     to,
     replyTo: data.email,
-    subject: `ProGo contact — ${data.name}${data.company ? ` (${data.company})` : ""}`,
+    subject: `${subjectPrefix} — ${data.name}${data.company ? ` (${data.company})` : ""}`,
     text: [
-      `New contact form submission from progo.one`,
+      `${heading} from progo.one`,
       ``,
+      `Intent: ${data.intent ?? "contact"}`,
       `Name: ${data.name}`,
       `Email: ${data.email}`,
       `Company: ${company}`,
@@ -128,9 +147,10 @@ export async function sendContactEmail(data: ContactPayload): Promise<void> {
     ].join("\n"),
     html: `
       <div style="font-family:system-ui,sans-serif;line-height:1.6;color:#0f172a">
-        <h2 style="margin:0 0 16px;color:#0891b2">New ProGo contact form submission</h2>
+        <h2 style="margin:0 0 16px;color:#0891b2">${heading}</h2>
         <table style="border-collapse:collapse;width:100%;max-width:560px">
-          <tr><td style="padding:8px 0;color:#64748b;width:120px">Name</td><td style="padding:8px 0"><strong>${escapeHtml(data.name)}</strong></td></tr>
+          <tr><td style="padding:8px 0;color:#64748b;width:120px">Intent</td><td style="padding:8px 0">${escapeHtml(data.intent ?? "contact")}</td></tr>
+          <tr><td style="padding:8px 0;color:#64748b">Name</td><td style="padding:8px 0"><strong>${escapeHtml(data.name)}</strong></td></tr>
           <tr><td style="padding:8px 0;color:#64748b">Email</td><td style="padding:8px 0"><a href="mailto:${escapeHtml(data.email)}">${escapeHtml(data.email)}</a></td></tr>
           <tr><td style="padding:8px 0;color:#64748b">Company</td><td style="padding:8px 0">${escapeHtml(company)}</td></tr>
           <tr><td style="padding:8px 0;color:#64748b">Role</td><td style="padding:8px 0">${escapeHtml(role)}</td></tr>

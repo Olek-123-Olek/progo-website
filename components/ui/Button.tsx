@@ -1,4 +1,5 @@
 import { type ReactNode } from "react";
+import { Link } from "@/i18n/navigation";
 
 type ButtonVariant = "primary" | "secondary" | "ghost" | "social";
 type ButtonSize = "sm" | "md" | "lg";
@@ -48,15 +49,23 @@ export function Button({
   const styles = `${base} ${variantStyles[variant]} ${sizeStyles[size]} ${disabled ? "pointer-events-none" : ""} ${className}`;
 
   if (href && !disabled) {
+    if (external) {
+      return (
+        <a
+          href={href}
+          className={styles}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {children}
+        </a>
+      );
+    }
+
     return (
-      <a
-        href={href}
-        className={styles}
-        target={external ? "_blank" : undefined}
-        rel={external ? "noopener noreferrer" : undefined}
-      >
+      <Link href={href as "/"} className={styles}>
         {children}
-      </a>
+      </Link>
     );
   }
 

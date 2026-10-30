@@ -11,19 +11,11 @@ export function Hero() {
   const tc = useTranslations("common");
 
   return (
-    <section className="relative min-h-0 flex items-center overflow-hidden pt-10 pb-20 md:pt-14">
-      <div className="absolute inset-0 bg-mesh bg-mesh-animated" />
-      <div className="absolute inset-0 grid-overlay map-grid-animate opacity-70" />
-      <div className="absolute inset-0 hero-route-glow opacity-30" />
-
-      <div className="absolute top-1/4 left-1/4 h-72 w-72 rounded-full bg-cyan-glow/5 blur-3xl animate-float" />
-      <div className="absolute bottom-1/4 right-1/4 h-56 w-56 rounded-full bg-red-accent/5 blur-3xl animate-float delay-300" />
-      <div className="absolute top-1/3 right-1/3 h-40 w-40 rounded-full bg-green-accent/5 blur-3xl animate-float delay-500" />
-
+    <section className="relative min-h-0 flex items-center overflow-hidden pt-8 pb-16 md:pt-10 md:pb-20">
       <div className="relative mx-auto max-w-7xl px-4 md:px-8 w-full">
         <div className="grid gap-10 lg:gap-6 items-center lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] xl:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)]">
           <div className="max-w-xl lg:max-w-none">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-glow/20 bg-cyan-glow/5 px-4 py-1.5 text-sm text-cyan-soft animate-fade-in-up">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-glow/20 bg-navy-950/45 px-4 py-1.5 text-sm text-cyan-soft animate-fade-in-up backdrop-blur-sm">
               <span className="h-2 w-2 rounded-full bg-cyan-glow animate-pulse-glow" />
               {t("badge")}
             </div>

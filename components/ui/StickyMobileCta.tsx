@@ -31,7 +31,7 @@ export function StickyMobileCta() {
           <span className="sticky-mobile-cta-badge">{t("badge")}</span>
           <span className="sticky-mobile-cta-sub">{t("hint")}</span>
         </div>
-        <Button href={LINKS.platform} size="sm" external className="sticky-mobile-cta-btn shrink-0">
+        <Button href={LINKS.startAccess} size="sm" className="sticky-mobile-cta-btn shrink-0">
           {t("cta")}
           <Icon name="arrow" size={14} className="arrow-accent" />
         </Button>

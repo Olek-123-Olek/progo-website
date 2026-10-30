@@ -2,6 +2,8 @@ export const CONTACT_EMAIL = "admin@progo.one";
 
 export const LINKS = {
   platform: process.env.NEXT_PUBLIC_PLATFORM_URL ?? "https://progo-davos.vercel.app/login",
+  /** Internal path — use with next-intl Link / Button (not external). */
+  startAccess: "/start",
   facebook:
     "https://www.facebook.com/groups/2753527658355972/?ref=share&mibextid=wwXIfr&rdid=0uNg9NWaObutmoFf&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fg%2F17ou2nGA1Q%2F%3Fmibextid%3DwwXIfr",
   email: `mailto:${CONTACT_EMAIL}`,

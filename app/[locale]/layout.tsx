@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ConsentAndAnalytics } from "@/components/analytics/ConsentAndAnalytics";
-import { AtmosphereBackground } from "@/components/ui/AtmosphereBackground";
+import { SiteBackdrop } from "@/components/ui/SiteBackdrop";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -77,7 +77,7 @@ export default async function LocaleLayout({
         suppressHydrationWarning
       >
         <NextIntlClientProvider messages={messages}>
-          <AtmosphereBackground />
+          <SiteBackdrop />
           <div className="relative z-10">
             {children}
             <ConsentAndAnalytics />

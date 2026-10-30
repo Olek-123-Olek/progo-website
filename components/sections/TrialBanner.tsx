@@ -15,13 +15,11 @@ export function TrialBanner() {
       className="relative pt-28 pb-6 md:pt-32 md:pb-8 overflow-hidden"
       aria-label={t("ariaLabel")}
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-cyan-glow/[0.06] via-transparent to-transparent pointer-events-none" />
-
       <div className="relative mx-auto max-w-7xl px-4 md:px-8">
-        <div className="trial-banner relative overflow-hidden rounded-2xl md:rounded-3xl border border-cyan-glow/30 bg-gradient-to-br from-navy-800/90 via-navy-900/95 to-navy-950/90 p-6 md:p-8 lg:p-10 glow-cyan animate-fade-in-up">
-          <div className="absolute -top-24 -right-16 h-56 w-56 rounded-full bg-cyan-glow/15 blur-3xl trial-banner-orb" />
-          <div className="absolute -bottom-20 -left-12 h-48 w-48 rounded-full bg-purple-500/10 blur-3xl trial-banner-orb delay-300" />
-          <div className="absolute inset-0 trial-banner-shine pointer-events-none" />
+        <div className="trial-banner relative overflow-hidden rounded-2xl md:rounded-3xl border border-cyan-glow/25 bg-navy-950/60 p-6 md:p-8 lg:p-10 backdrop-blur-xl animate-fade-in-up">
+          <div className="absolute -top-24 -right-16 h-56 w-56 rounded-full bg-cyan-glow/10 blur-3xl trial-banner-orb" />
+          <div className="absolute -bottom-20 -left-12 h-48 w-48 rounded-full bg-purple-500/8 blur-3xl trial-banner-orb delay-300" />
+          <div className="absolute inset-0 trial-banner-shine pointer-events-none opacity-40" />
 
           <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center lg:gap-10">
             <div>
@@ -73,8 +71,8 @@ export function TrialBanner() {
               </ul>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-                <Button href={LINKS.platform} size="lg" external className="trial-banner-cta">
-                  <Icon name="platform" size={20} />
+                <Button href={LINKS.startAccess} size="lg" className="trial-banner-cta">
+                  <Icon name="check" size={20} />
                   {t("cta")}
                   <Icon name="arrow" size={18} className="arrow-accent" />
                 </Button>
@@ -83,7 +81,7 @@ export function TrialBanner() {
             </div>
 
             <div className="hidden lg:flex flex-col items-center justify-center">
-              <div className="trial-banner-badge relative flex h-44 w-44 flex-col items-center justify-center rounded-full border-2 border-cyan-glow/50 bg-gradient-to-br from-cyan-glow/20 to-purple-600/20 shadow-[0_0_40px_rgba(0,229,255,0.3)]">
+              <div className="trial-banner-badge relative flex h-44 w-44 flex-col items-center justify-center rounded-full border-2 border-cyan-glow/40 bg-gradient-to-br from-cyan-glow/15 to-purple-600/15 shadow-[0_0_28px_rgba(0,229,255,0.18)]">
                 <span className="text-5xl font-black leading-none text-cyan-glow text-glow">
                   {t("daysNumber")}
                 </span>
@@ -91,7 +89,7 @@ export function TrialBanner() {
                   {t("daysLabel")}
                 </span>
                 <span className="mt-2 text-xs font-medium text-text-muted">{t("freeLabel")}</span>
-                <div className="absolute inset-0 rounded-full border border-cyan-glow/30 trial-banner-ring" />
+                <div className="absolute inset-0 rounded-full border border-cyan-glow/25 trial-banner-ring" />
               </div>
             </div>
           </div>

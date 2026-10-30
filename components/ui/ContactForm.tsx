@@ -6,6 +6,7 @@ import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 import { CONTACT_EMAIL } from "@/lib/constants";
+import type { ContactIntent } from "@/lib/contact";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
@@ -31,11 +32,37 @@ function isErrorKey(value: string): value is ErrorKey {
   return (ERROR_KEYS as readonly string[]).includes(value);
 }
 
-export function ContactForm() {
+type ContactFormProps = {
+  intent?: ContactIntent;
+};
+
+/** Homepage contact — does not require `startAccess` messages. */
+export function ContactForm({ intent = "contact" }: ContactFormProps) {
+  if (intent === "access") {
+    return <AccessContactForm />;
+  }
+  return <ContactFormFields intent="contact" />;
+}
+
+function AccessContactForm() {
+  const tAccess = useTranslations("startAccess");
+  return <ContactFormFields intent="access" access={tAccess} />;
+}
+
+type AccessT = ReturnType<typeof useTranslations>;
+
+function ContactFormFields({
+  intent,
+  access,
+}: {
+  intent: ContactIntent;
+  access?: AccessT;
+}) {
   const t = useTranslations("contact.form");
   const locale = useLocale();
   const [status, setStatus] = useState<FormStatus>("idle");
   const [errorKey, setErrorKey] = useState<string | null>(null);
+  const isAccess = intent === "access";
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -44,6 +71,8 @@ export function ContactForm() {
     const formData = new FormData(form);
 
     const message = String(formData.get("message") ?? "").trim();
+    const company = String(formData.get("company") ?? "").trim();
+    const role = String(formData.get("role") ?? "").trim();
 
     if (message.length < MIN_MESSAGE_LENGTH) {
       setErrorKey("invalid_message");
@@ -51,15 +80,28 @@ export function ContactForm() {
       return;
     }
 
+    if (isAccess && company.length < 2) {
+      setErrorKey("invalid_company");
+      setStatus("error");
+      return;
+    }
+
+    if (isAccess && !role) {
+      setErrorKey("invalid_role");
+      setStatus("error");
+      return;
+    }
+
     const payload = {
       name: String(formData.get("name") ?? ""),
       email: String(formData.get("email") ?? ""),
-      company: String(formData.get("company") ?? ""),
-      role: String(formData.get("role") ?? ""),
+      company,
+      role,
       message,
       privacyAccepted: formData.get("privacy") === "on",
       website: String(formData.get("website") ?? ""),
       locale,
+      intent,
     };
 
     if (!payload.privacyAccepted) {
@@ -100,8 +142,12 @@ export function ContactForm() {
         <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-cyan-glow/10 text-cyan-glow">
           <Icon name="check" size={28} />
         </div>
-        <h3 className="text-xl font-semibold text-text-primary mb-2">{t("successTitle")}</h3>
-        <p className="text-text-secondary mb-6">{t("successBody")}</p>
+        <h3 className="text-xl font-semibold text-text-primary mb-2">
+          {isAccess && access ? access("successTitle") : t("successTitle")}
+        </h3>
+        <p className="text-text-secondary mb-6">
+          {isAccess && access ? access("successBody") : t("successBody")}
+        </p>
         <Button type="button" variant="secondary" size="sm" onClick={() => setStatus("idle")}>
           {t("sendAnother")}
         </Button>
@@ -146,25 +192,37 @@ export function ContactForm() {
 
         <div className="contact-field">
           <label htmlFor="contact-company" className="contact-label">
-            {t("company")}
+            {t("company")} {isAccess && <span className="text-cyan-soft">*</span>}
           </label>
           <input
             id="contact-company"
             name="company"
             type="text"
+            required={isAccess}
             autoComplete="organization"
             className="contact-input"
-            placeholder={t("companyPlaceholder")}
+            placeholder={
+              isAccess && access ? access("companyPlaceholder") : t("companyPlaceholder")
+            }
             disabled={status === "submitting"}
           />
         </div>
 
         <div className="contact-field">
           <label htmlFor="contact-role" className="contact-label">
-            {t("role")}
+            {t("role")} {isAccess && <span className="text-cyan-soft">*</span>}
           </label>
-          <select id="contact-role" name="role" className="contact-input contact-select" disabled={status === "submitting"} defaultValue="">
-            <option value="">{t("rolePlaceholder")}</option>
+          <select
+            id="contact-role"
+            name="role"
+            className="contact-input contact-select"
+            disabled={status === "submitting"}
+            defaultValue=""
+            required={isAccess}
+          >
+            <option value="">
+              {isAccess && access ? access("rolePlaceholder") : t("rolePlaceholder")}
+            </option>
             {ROLE_KEYS.map((key) => (
               <option key={key} value={key}>
                 {t(`roles.${key}`)}
@@ -183,12 +241,16 @@ export function ContactForm() {
           name="message"
           required
           minLength={MIN_MESSAGE_LENGTH}
-          rows={5}
+          rows={isAccess ? 7 : 5}
           className="contact-input contact-textarea"
-          placeholder={t("messagePlaceholder")}
+          placeholder={
+            isAccess && access ? access("messagePlaceholder") : t("messagePlaceholder")
+          }
           disabled={status === "submitting"}
         />
-        <p className="mt-1.5 text-xs text-text-muted">{t("messageHint")}</p>
+        <p className="mt-1.5 text-xs text-text-muted">
+          {isAccess && access ? access("messageHint") : t("messageHint")}
+        </p>
       </div>
 
       <label className="contact-privacy mt-5">
@@ -245,7 +307,11 @@ export function ContactForm() {
           className="w-full sm:w-auto"
         >
           <Icon name="email" size={18} />
-          {status === "submitting" ? t("submitting") : t("submit")}
+          {status === "submitting"
+            ? t("submitting")
+            : isAccess && access
+              ? access("formSubmit")
+              : t("submit")}
           {status !== "submitting" && <Icon name="arrow" size={16} className="arrow-accent" />}
         </Button>
         <p className="text-sm text-text-muted">{t("responseTime")}</p>

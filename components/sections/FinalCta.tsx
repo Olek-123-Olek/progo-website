@@ -5,6 +5,7 @@ import { LINKS } from "@/lib/constants";
 
 export function FinalCta() {
   const t = useTranslations("cta");
+  const tt = useTranslations("trialBanner");
   const tc = useTranslations("common");
 
   return (
@@ -24,9 +25,9 @@ export function FinalCta() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up delay-200">
-              <Button href={LINKS.platform} size="lg" external>
-                <Icon name="platform" size={20} />
-                {tc("openPlatform")}
+              <Button href={LINKS.startAccess} size="lg">
+                <Icon name="check" size={20} />
+                {tt("cta")}
                 <Icon name="arrow" size={18} className="arrow-accent" />
               </Button>
               <Button href={LINKS.facebook} variant="ghost" size="lg" external>
@@ -34,6 +35,17 @@ export function FinalCta() {
                 {tc("facebookCommunity")}
               </Button>
             </div>
+
+            <p className="mt-6 text-sm text-text-muted animate-fade-in-up delay-300">
+              <a
+                href={LINKS.platform}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cyan-soft/80 hover:text-cyan-soft transition-colors"
+              >
+                {tc("openPlatform")}
+              </a>
+            </p>
           </div>
         </div>
       </div>
